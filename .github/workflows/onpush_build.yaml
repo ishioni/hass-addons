@@ -92,10 +92,10 @@ jobs:
         run: |
           {
             echo "value<<EOF"
-            echo "io.hash.name=${{ steps.info.outputs.name }}"
-            echo "io.hash.description=${{ steps.info.outputs.description }}"
-            echo "io.hash.type=addon"
-            echo "io.hash.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}"
+            echo "io.hass.name=${{ steps.info.outputs.name }}"
+            echo "io.hass.description=${{ steps.info.outputs.description }}"
+            echo "io.hass.type=addon"
+            echo "io.hass.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}"
             echo "org.opencontainers.image.title=${{ steps.info.outputs.name }}"
             echo "org.opencontainers.image.description=${{ steps.info.outputs.description }}"
             echo "org.opencontainers.image.authors=Ishioni <ishioni@users.noreply.github.com>"

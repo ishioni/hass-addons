@@ -2,7 +2,7 @@ FROM ghcr.io/hassio-addons/debian-base:9.3.0
 
 ARG CUPS_VERSION=2.4.10-3+deb13u2
 
-LABEL io.hash.version="1.0" io.hash.type="addon" io.hash.arch="aarch64|amd64"
+LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

@@ -140,7 +140,7 @@ jobs:
 
       - name: ℹ️ Gather addon info
         id: information
-        uses: frenck/action-addon-information@v1.4
+        uses: home-assistant/actions/helpers/info@master
         with:
           path: "./${{ matrix.addon }}/"
 
@@ -156,19 +156,7 @@ jobs:
         id: supported
         shell: bash
         run: |
-          case "${{ matrix.arch }}" in
-            amd64)
-              supported="${{ steps.information.outputs.amd64 }}"
-              ;;
-            aarch64)
-              supported="${{ steps.information.outputs.aarch64 }}"
-              ;;
-            *)
-              supported="false"
-              ;;
-          esac
-
-          if [[ "$supported" == 'true' ]]; then
+          if jq -e --arg arch "${{ matrix.arch }}" '.[] | select(. == $arch)' <<< '${{ steps.information.outputs.architectures }}' >/dev/null; then
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           else
             echo "enabled=false" >> "$GITHUB_OUTPUT"
@@ -190,11 +178,11 @@ jobs:
         id: labels
         shell: bash
         run: |
-          labels="io.hash.version=${{ steps.information.outputs.version }}"
-          labels=$(printf '%s' "$labels\nio.hash.name=${{ steps.information.outputs.name }}")
-          labels=$(printf '%s' "$labels\nio.hash.description=${{ steps.information.outputs.description }}")
-          labels=$(printf '%s' "$labels\nio.hash.type=addon")
-          labels=$(printf '%s' "$labels\nio.hash.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}")
+          labels="io.hass.version=${{ steps.information.outputs.version }}"
+          labels=$(printf '%s' "$labels\nio.hass.name=${{ steps.information.outputs.name }}")
+          labels=$(printf '%s' "$labels\nio.hass.description=${{ steps.information.outputs.description }}")
+          labels=$(printf '%s' "$labels\nio.hass.type=addon")
+          labels=$(printf '%s' "$labels\nio.hass.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}")
           labels=$(printf '%s' "$labels\norg.opencontainers.image.title=${{ steps.information.outputs.name }}")
           labels=$(printf '%s' "$labels\norg.opencontainers.image.description=${{ steps.information.outputs.description }}")
           labels=$(printf '%s' "$labels\norg.opencontainers.image.version=${{ steps.information.outputs.version }}")
@@ -203,7 +191,7 @@ jobs:
           labels=$(printf '%s' "$labels\norg.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}")
           labels=$(printf '%s' "$labels\norg.opencontainers.image.created=$(date -Is)")
           labels=$(printf '%s' "$labels\norg.opencontainers.image.revision=${GITHUB_SHA}")
-          labels=$(printf '%s' "$labels\nio.hash.arch=${{ matrix.arch }}")
+          labels=$(printf '%s' "$labels\nio.hass.arch=${{ matrix.arch }}")
           echo "value=${labels//$'\n'/'%0A'}" >> "$GITHUB_OUTPUT"
 
       - name: 🏗️ Set up Docker Buildx

@@ -1,4 +1,4 @@
-FROM ghcr.io/hassio-addons/debian-base:9.3.0
+FROM ghcr.io/hassio-addons/debian-base:9.3.0 AS builder
 
 ARG AIRSANE_REF=v.0.4.10
 ARG BRSCAN_REF=v1.0.1
@@ -9,25 +9,19 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt update \
     && apt install -y --no-install-recommends \
-        avahi-daemon \
         build-essential \
         ca-certificates \
         cmake \
         curl \
-        dbus \
-        jq \
         libavahi-client-dev \
         libjpeg-dev \
         libncurses-dev \
-        libnss-mdns \
         libpng-dev \
         libsane-dev \
         libusb-1.0-0-dev \
         libusb-dev \
         patch \
         pkg-config \
-        python3 \
-        sane-utils \
         tar \
     && rm -rf /var/lib/apt/lists/*
 
@@ -46,7 +40,6 @@ RUN mkdir -p /tmp/src \
     && cmake --build /tmp/brscan/build -j"$(nproc)" \
     && cmake --install /tmp/brscan/build \
     && printf '/usr/lib/sane\n' > /etc/ld.so.conf.d/brscan-sane.conf \
-    && ldconfig \
     && rm -rf /tmp/brscan /tmp/src
 
 RUN mkdir -p /tmp/src \
@@ -58,9 +51,34 @@ RUN mkdir -p /tmp/src \
     && cmake --install /tmp/AirSane-build \
     && rm -rf /tmp/AirSane /tmp/AirSane-build /tmp/src /tmp/patches
 
+FROM ghcr.io/hassio-addons/debian-base:9.3.0
+
+LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt update \
+    && apt install -y --no-install-recommends \
+        avahi-daemon \
+        ca-certificates \
+        dbus \
+        jq \
+        libnss-mdns \
+        libusb-0.1-4 \
+        libusb-1.0-0 \
+        python3 \
+        sane-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /usr/local/bin/airsaned /usr/local/bin/airsaned
+COPY --from=builder /usr/lib/sane/libsane-brother.so.1 /usr/lib/sane/libsane-brother.so.1
+COPY --from=builder /usr/share/sane/brother /usr/share/sane/brother
+COPY --from=builder /etc/ld.so.conf.d/brscan-sane.conf /etc/ld.so.conf.d/brscan-sane.conf
+
 COPY rootfs /
 
-RUN chmod a+x /run.sh /usr/local/bin/render-config.py
+RUN chmod a+x /run.sh /usr/local/bin/render-config.py \
+    && ldconfig
 
 EXPOSE 8090
 

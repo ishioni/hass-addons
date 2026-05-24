@@ -1,5 +1,5 @@
 ---
-version: 0.1.5
+version: 0.1.0
 slug: airsane_scanner
 name: AirSane Scanner
 description: Publish configured SANE scanners to macOS and other AirScan/eSCL clients

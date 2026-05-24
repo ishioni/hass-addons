@@ -1,5 +1,5 @@
 ---
-version: 0.1.4
+version: 0.1.5
 slug: airsane_scanner
 name: AirSane Scanner
 description: Publish configured SANE scanners to macOS and other AirScan/eSCL clients
@@ -18,31 +18,9 @@ ports_description:
   8090/tcp: AirSane web UI and eSCL endpoint
 options:
   log_level: info
-  airsane:
-    port: 8090
-    interface: ""
-    hotplug: true
-    network_hotplug: false
-    reload_delay: 1
-    mdns_announce: true
-    announce_base_url: ""
-    web_interface: true
-    compatible_path: true
-    local_scanners_only: false
   scanners: []
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-  airsane:
-    port: port?
-    interface: str?
-    hotplug: bool?
-    network_hotplug: bool?
-    reload_delay: int(0,60)?
-    mdns_announce: bool?
-    announce_base_url: str?
-    web_interface: bool?
-    compatible_path: bool?
-    local_scanners_only: bool?
   scanners:
     - name: str
       host: str

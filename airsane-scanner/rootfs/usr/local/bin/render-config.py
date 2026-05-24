@@ -175,36 +175,23 @@ def write_brother_netdev_file(scanners: list[dict[str, Any]]) -> None:
 
 def write_airsane_defaults(options: dict[str, Any]) -> None:
     ensure_dir(AIRSANE_DEFAULTS.parent)
-    airsane = options.get("airsane") or {}
-    port = int(airsane.get("port", 8090))
-    interface = str(airsane.get("interface") or "")
-    hotplug = str(normalize_bool(airsane.get("hotplug"), True)).lower()
-    network_hotplug = str(normalize_bool(airsane.get("network_hotplug"), False)).lower()
-    reload_delay = int(airsane.get("reload_delay", 1))
-    mdns_announce = str(normalize_bool(airsane.get("mdns_announce"), True)).lower()
-    announce_base_url = str(airsane.get("announce_base_url") or "")
-    web_interface = str(normalize_bool(airsane.get("web_interface"), True)).lower()
-    compatible_path = str(normalize_bool(airsane.get("compatible_path"), True)).lower()
-    local_scanners_only = str(
-        normalize_bool(airsane.get("local_scanners_only"), False)
-    ).lower()
 
-    content = f"""INTERFACE={interface}
-LISTEN_PORT={port}
+    content = """INTERFACE=
+LISTEN_PORT=8090
 UNIX_SOCKET=
 ACCESS_LOG=-
-HOTPLUG={hotplug}
-NETWORK_HOTPLUG={network_hotplug}
-RELOAD_DELAY={reload_delay}
-MDNS_ANNOUNCE={mdns_announce}
+HOTPLUG=true
+NETWORK_HOTPLUG=false
+RELOAD_DELAY=1
+MDNS_ANNOUNCE=true
 ANNOUNCE_SECURE=false
-ANNOUNCE_BASE_URL={announce_base_url}
-WEB_INTERFACE={web_interface}
+ANNOUNCE_BASE_URL=
+WEB_INTERFACE=true
 RESET_OPTION=false
 DISCLOSE_VERSION=true
 RANDOM_PATHS=false
-COMPATIBLE_PATH={compatible_path}
-LOCAL_SCANNERS_ONLY={local_scanners_only}
+COMPATIBLE_PATH=true
+LOCAL_SCANNERS_ONLY=false
 OPTIONS_FILE=/etc/airsane/options.conf
 IGNORE_LIST=/etc/airsane/ignore.conf
 ACCESS_FILE=/etc/airsane/access.conf

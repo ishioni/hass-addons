@@ -35,17 +35,6 @@ Example configuration:
 
 ```yaml
 log_level: info
-airsane:
-  port: 8090
-  interface: ""
-  hotplug: true
-  network_hotplug: false
-  reload_delay: 1
-  mdns_announce: true
-  announce_base_url: ""
-  web_interface: true
-  compatible_path: true
-  local_scanners_only: false
 scanners:
   - name: office_brother
     host: 192.168.1.4
@@ -71,17 +60,6 @@ When AirSane can uniquely match a configured scanner model, the add-on writes `d
 
 If you configure multiple scanners that share the same Brother model string, AirSane cannot reliably distinguish them with the current matching approach. In that case, the add-on skips per-device defaults for that model and logs a warning instead of generating misleading config.
 
-### AirSane runtime fields
-
-- `airsane.interface`: Optional interface name passed to `airsaned --interface=...`.
-  - Leave empty to listen on all interfaces.
-  - If startup is unstable, try pinning this to the host LAN interface.
-- `airsane.hotplug`: Whether AirSane should rescan on generic hotplug events.
-- `airsane.network_hotplug`: Whether AirSane should reload when IP addresses change.
-  - Defaults to `false` in this add-on because Home Assistant's host-network/container environment can produce IPv6/link-local address churn that causes AirSane to reload during startup.
-- `airsane.reload_delay`: Delay before an AirSane hotplug-triggered reload.
-- `airsane.announce_base_url`: Optional explicit base URL passed to `airsaned --announce-base-url=...`.
-
 ## Networking
 
 This add-on uses `host_network: true` because:
@@ -89,6 +67,7 @@ This add-on uses `host_network: true` because:
 - AirSane publishes scanners over mDNS/Avahi
 - scanner discovery and client interoperability are best on the host network
 - scanners are expected to be reachable directly on the local LAN
+- mDNS packet forwarding alone is not enough; the advertised host identity also needs to match the Home Assistant host rather than a container-local bridge address
 
 Port exposed:
 
@@ -109,6 +88,7 @@ Users should configure the add-on through Home Assistant options, not by editing
 
 ## Notes
 
+- The add-on intentionally keeps AirSane runtime behavior fixed rather than exposing upstream daemon flags as user options. Internally it uses a single published eSCL path, keeps the web UI enabled, announces over mDNS, and disables AirSane network-hotplug reloads to avoid startup churn from transient IPv6/link-local address changes in the Home Assistant host-network environment.
 - This add-on currently focuses on Brother network scanners
 - The built-in model catalog is broad because it is derived from Brother's `brscan4` ini inventory; actual success still depends on your device supporting network scanning
 - Higher scan resolutions may be device-dependent and can be slow on older scanners

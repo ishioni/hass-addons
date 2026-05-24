@@ -1,10 +1,14 @@
 # Changelog
 
+## 0.1.5
+
+- Simplify the add-on configuration schema to focus on configured scanners instead of exposing upstream AirSane daemon flags
+- Keep the AirSane runtime behavior fixed internally with mDNS announcement enabled, a compatible `/eSCL` path, and network-hotplug reloads disabled for Home Assistant host-network stability
+
 ## 0.1.4
 
 - Pass AirSane hotplug-related flags through from generated config instead of silently relying on upstream defaults
-- Add configurable `airsane.interface`, `airsane.hotplug`, `airsane.network_hotplug`, `airsane.reload_delay`, and `airsane.announce_base_url` add-on options
-- Default `airsane.network_hotplug` to `false` in this add-on to avoid startup reloads triggered by IPv6/link-local address churn in the Home Assistant host-network environment
+- Default AirSane `network_hotplug` to `false` in this add-on to avoid startup reloads triggered by IPv6/link-local address churn in the Home Assistant host-network environment
 
 ## 0.1.3
 

@@ -11,7 +11,6 @@ image: ghcr.io/ishioni/hass-addon-airsane-scanner-{arch}
 init: false
 host_network: true
 hassio_api: true
-homeassistant_api: false
 ports:
   8090/tcp: 8090
 ports_description:

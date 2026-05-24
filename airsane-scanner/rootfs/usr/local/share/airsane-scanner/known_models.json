@@ -1,4 +1,142 @@
 {
+  "ADS-1000W": {
+    "usb_id": "0x4f9:0x60a6",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-1000W"
+  },
+  "ADS-1100W": {
+    "usb_id": "0x4f9:0x60a7",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-1100W"
+  },
+  "ADS-1500W": {
+    "usb_id": "0x4f9:0x60a8",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-1500W"
+  },
+  "ADS-1600W": {
+    "usb_id": "0x4f9:0x60a9",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-1600W"
+  },
+  "ADS-2000": {
+    "usb_id": "0x4f9:0x60a0",
+    "series": 115,
+    "type": 1,
+    "model_name": "ADS-2000"
+  },
+  "ADS-2000e": {
+    "usb_id": "0x4f9:0x037c",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2000e"
+  },
+  "ADS-2100": {
+    "usb_id": "0x4f9:0x60a1",
+    "series": 115,
+    "type": 1,
+    "model_name": "ADS-2100"
+  },
+  "ADS-2100e": {
+    "usb_id": "0x4f9:0x037d",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2100e"
+  },
+  "ADS-2400N": {
+    "usb_id": "0x4f9:0x03b7",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2400N"
+  },
+  "ADS-2500W": {
+    "usb_id": "0x4f9:0x60a4",
+    "series": 115,
+    "type": 1,
+    "model_name": "ADS-2500W"
+  },
+  "ADS-2500We": {
+    "usb_id": "0x4f9:0x037e",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2500We"
+  },
+  "ADS-2600W": {
+    "usb_id": "0x4f9:0x60a5",
+    "series": 115,
+    "type": 1,
+    "model_name": "ADS-2600W"
+  },
+  "ADS-2600We": {
+    "usb_id": "0x4f9:0x037f",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2600We"
+  },
+  "ADS-2800W": {
+    "usb_id": "0x4f9:0x03b9",
+    "series": 315,
+    "type": 1,
+    "model_name": "ADS-2800W"
+  },
+  "ADS-3000N": {
+    "usb_id": "0x4f9:0x03b8",
+    "series": 319,
+    "type": 1,
+    "model_name": "ADS-3000N"
+  },
+  "ADS-3600W": {
+    "usb_id": "0x4f9:0x03ba",
+    "series": 319,
+    "type": 1,
+    "model_name": "ADS-3600W"
+  },
+  "DCP-1510": {
+    "usb_id": "0x4f9:0x02d0",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-1510"
+  },
+  "DCP-1600": {
+    "usb_id": "0x4f9:0x0376",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-1600"
+  },
+  "DCP-1608": {
+    "usb_id": "0x4f9:0x0378",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-1608"
+  },
+  "DCP-1610NW": {
+    "usb_id": "0x4f9:0x035c",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-1610NW"
+  },
+  "DCP-1610W": {
+    "usb_id": "0x4f9:0x035b",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-1610W"
+  },
+  "DCP-1618W": {
+    "usb_id": "0x4f9:0x0360",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-1618W"
+  },
+  "DCP-1619": {
+    "usb_id": "0x4f9:0x0379",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-1619"
+  },
   "DCP-7055": {
     "usb_id": "0x4f9:0x0248",
     "series": 14,
@@ -40,5 +178,2387 @@
     "series": 14,
     "type": 2,
     "model_name": "DCP-7070DW"
+  },
+  "DCP-7080": {
+    "usb_id": "0x4f9:0x0368",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-7080"
+  },
+  "DCP-7080D": {
+    "usb_id": "0x4f9:0x0367",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-7080D"
+  },
+  "DCP-7090": {
+    "usb_id": "0x4f9:0x0417",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-7090"
+  },
+  "DCP-7090DW": {
+    "usb_id": "0x4f9:0x04a5",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-7090DW"
+  },
+  "DCP-7095D": {
+    "usb_id": "0x4f9:0x0418",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-7095D"
+  },
+  "DCP-7180DN": {
+    "usb_id": "0x4f9:0x0369",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-7180DN"
+  },
+  "DCP-7189DW": {
+    "usb_id": "0x4f9:0x036a",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-7189DW"
+  },
+  "DCP-7190DN": {
+    "usb_id": "0x4f9:0x0419",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-7190DN"
+  },
+  "DCP-7190DW": {
+    "usb_id": "0x4f9:0x04a6",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-7190DW"
+  },
+  "DCP-7195DW": {
+    "usb_id": "0x4f9:0x041a",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-7195DW"
+  },
+  "DCP-8110D": {
+    "usb_id": "0x4f9:0x02ac",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-8110D"
+  },
+  "DCP-8110DN": {
+    "usb_id": "0x4f9:0x0291",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-8110DN"
+  },
+  "DCP-8112DN": {
+    "usb_id": "0x4f9:0x02b5",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-8112DN"
+  },
+  "DCP-8150DN": {
+    "usb_id": "0x4f9:0x0292",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-8150DN"
+  },
+  "DCP-8152DN": {
+    "usb_id": "0x4f9:0x02b6",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-8152DN"
+  },
+  "DCP-8155DN": {
+    "usb_id": "0x4f9:0x0293",
+    "series": 117,
+    "type": 2,
+    "model_name": "DCP-8155DN"
+  },
+  "DCP-8157DN": {
+    "usb_id": "0x4f9:0x02b7",
+    "series": 117,
+    "type": 2,
+    "model_name": "DCP-8157DN"
+  },
+  "DCP-8250DN": {
+    "usb_id": "0x4f9:0x0294",
+    "series": 117,
+    "type": 2,
+    "model_name": "DCP-8250DN"
+  },
+  "DCP-9015CDW": {
+    "usb_id": "0x4f9:0x03c0",
+    "series": 218,
+    "type": 2,
+    "model_name": "DCP-9015CDW"
+  },
+  "DCP-9017CDW": {
+    "usb_id": "0x4f9:0x03bf",
+    "series": 218,
+    "type": 2,
+    "model_name": "DCP-9017CDW"
+  },
+  "DCP-9020CDN": {
+    "usb_id": "0x4f9:0x02b1",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-9020CDN"
+  },
+  "DCP-9020CDW": {
+    "usb_id": "0x4f9:0x02d3",
+    "series": 17,
+    "type": 2,
+    "model_name": "DCP-9020CDW"
+  },
+  "DCP-9022CDW": {
+    "usb_id": "0x4f9:0x036f",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-9022CDW"
+  },
+  "DCP-9030CDN": {
+    "usb_id": "0x4f9:0x0447",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-9030CDN"
+  },
+  "DCP-9055CDN": {
+    "usb_id": "0x4f9:0x0241",
+    "series": 16,
+    "type": 2,
+    "model_name": "DCP-9055CDN"
+  },
+  "DCP-9270CDN": {
+    "usb_id": "0x4f9:0x0242",
+    "series": 116,
+    "type": 2,
+    "model_name": "DCP-9270CDN"
+  },
+  "DCP-B7500D": {
+    "usb_id": "0x4f9:0x041b",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-B7500D"
+  },
+  "DCP-B7520DW": {
+    "usb_id": "0x4f9:0x041c",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-B7520DW"
+  },
+  "DCP-B7530DN": {
+    "usb_id": "0x4f9:0x041d",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-B7530DN"
+  },
+  "DCP-B7535DW": {
+    "usb_id": "0x4f9:0x041e",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-B7535DW"
+  },
+  "DCP-J100": {
+    "usb_id": "0x4f9:0x02fc",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J100"
+  },
+  "DCP-J105": {
+    "usb_id": "0x4f9:0x02fd",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J105"
+  },
+  "DCP-J1100DW": {
+    "usb_id": "0x4f9:0x0409",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J1100DW"
+  },
+  "DCP-J132N": {
+    "usb_id": "0x4f9:0x02f9",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J132N"
+  },
+  "DCP-J132W": {
+    "usb_id": "0x4f9:0x02de",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J132W"
+  },
+  "DCP-J137N": {
+    "usb_id": "0x4f9:0x0351",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J137N"
+  },
+  "DCP-J140W": {
+    "usb_id": "0x4f9:0x02a0",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-J140W"
+  },
+  "DCP-J152N": {
+    "usb_id": "0x4f9:0x02e0",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J152N"
+  },
+  "DCP-J152W": {
+    "usb_id": "0x4f9:0x02df",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J152W"
+  },
+  "DCP-J172W": {
+    "usb_id": "0x4f9:0x02e1",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J172W"
+  },
+  "DCP-J4110DW": {
+    "usb_id": "0x4f9:0x02c2",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J4110DW"
+  },
+  "DCP-J4120DW": {
+    "usb_id": "0x4f9:0x0339",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J4120DW"
+  },
+  "DCP-J4210N": {
+    "usb_id": "0x4f9:0x02c6",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J4210N"
+  },
+  "DCP-J4215N": {
+    "usb_id": "0x4f9:0x02dd",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J4215N"
+  },
+  "DCP-J4220N": {
+    "usb_id": "0x4f9:0x0349",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J4220N"
+  },
+  "DCP-J4225N": {
+    "usb_id": "0x4f9:0x034a",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J4225N"
+  },
+  "DCP-J525N": {
+    "usb_id": "0x4f9:0x027a",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-J525N"
+  },
+  "DCP-J525W": {
+    "usb_id": "0x4f9:0x0279",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-J525W"
+  },
+  "DCP-J540N": {
+    "usb_id": "0x4f9:0x02bc",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-J540N"
+  },
+  "DCP-J552DW": {
+    "usb_id": "0x4f9:0x02e2",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J552DW"
+  },
+  "DCP-J552N": {
+    "usb_id": "0x4f9:0x02e3",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J552N"
+  },
+  "DCP-J557N": {
+    "usb_id": "0x4f9:0x0353",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J557N"
+  },
+  "DCP-J562DW": {
+    "usb_id": "0x4f9:0x0380",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J562DW"
+  },
+  "DCP-J562N": {
+    "usb_id": "0x4f9:0x0381",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J562N"
+  },
+  "DCP-J567N": {
+    "usb_id": "0x4f9:0x03ea",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J567N"
+  },
+  "DCP-J572DW": {
+    "usb_id": "0x4f9:0x03fe",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J572DW"
+  },
+  "DCP-J572N": {
+    "usb_id": "0x4f9:0x0405",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J572N"
+  },
+  "DCP-J577N": {
+    "usb_id": "0x4f9:0x0460",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J577N"
+  },
+  "DCP-J582N": {
+    "usb_id": "0x4f9:0x046d",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J582N"
+  },
+  "DCP-J587N": {
+    "usb_id": "0x4f9:0x0471",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J587N"
+  },
+  "DCP-J725DW": {
+    "usb_id": "0x4f9:0x027b",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J725DW"
+  },
+  "DCP-J725N": {
+    "usb_id": "0x4f9:0x027c",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J725N"
+  },
+  "DCP-J740N": {
+    "usb_id": "0x4f9:0x02bd",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J740N"
+  },
+  "DCP-J752DW": {
+    "usb_id": "0x4f9:0x02e4",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J752DW"
+  },
+  "DCP-J752N": {
+    "usb_id": "0x4f9:0x02e5",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J752N"
+  },
+  "DCP-J757N": {
+    "usb_id": "0x4f9:0x0354",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J757N"
+  },
+  "DCP-J762N": {
+    "usb_id": "0x4f9:0x03bd",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J762N"
+  },
+  "DCP-J767N": {
+    "usb_id": "0x4f9:0x03eb",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-J767N"
+  },
+  "DCP-J772DW": {
+    "usb_id": "0x4f9:0x03ff",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J772DW"
+  },
+  "DCP-J774DW": {
+    "usb_id": "0x4f9:0x0400",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-J774DW"
+  },
+  "DCP-J785DW": {
+    "usb_id": "0x4f9:0x03c8",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J785DW"
+  },
+  "DCP-J925DW": {
+    "usb_id": "0x4f9:0x027d",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J925DW"
+  },
+  "DCP-J925N": {
+    "usb_id": "0x4f9:0x028a",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J925N"
+  },
+  "DCP-J940N": {
+    "usb_id": "0x4f9:0x02c0",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-J940N"
+  },
+  "DCP-J952N": {
+    "usb_id": "0x4f9:0x02e6",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J952N"
+  },
+  "DCP-J957N": {
+    "usb_id": "0x4f9:0x0355",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J957N"
+  },
+  "DCP-J962N": {
+    "usb_id": "0x4f9:0x0383",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J962N"
+  },
+  "DCP-J963N": {
+    "usb_id": "0x4f9:0x0397",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J963N"
+  },
+  "DCP-J968N": {
+    "usb_id": "0x4f9:0x03ed",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J968N"
+  },
+  "DCP-J972N": {
+    "usb_id": "0x4f9:0x0406",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J972N"
+  },
+  "DCP-J973N": {
+    "usb_id": "0x4f9:0x0407",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J973N"
+  },
+  "DCP-J978N": {
+    "usb_id": "0x4f9:0x0461",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J978N"
+  },
+  "DCP-J981N": {
+    "usb_id": "0x4f9:0x046e",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J981N"
+  },
+  "DCP-J982N": {
+    "usb_id": "0x4f9:0x046f",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J982N"
+  },
+  "DCP-J983N": {
+    "usb_id": "0x4f9:0x03ca",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-J983N"
+  },
+  "DCP-J987N": {
+    "usb_id": "0x4f9:0x0472",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J987N"
+  },
+  "DCP-J988N": {
+    "usb_id": "0x4f9:0x040d",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-J988N"
+  },
+  "DCP-L2500D": {
+    "usb_id": "0x4f9:0x0321",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-L2500D"
+  },
+  "DCP-L2510D": {
+    "usb_id": "0x4f9:0x041f",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L2510D"
+  },
+  "DCP-L2520D": {
+    "usb_id": "0x4f9:0x0324",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-L2520D"
+  },
+  "DCP-L2520DW": {
+    "usb_id": "0x4f9:0x0322",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-L2520DW"
+  },
+  "DCP-L2530DW": {
+    "usb_id": "0x4f9:0x0420",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L2530DW"
+  },
+  "DCP-L2535D": {
+    "usb_id": "0x4f9:0x0421",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L2535D"
+  },
+  "DCP-L2535DW": {
+    "usb_id": "0x4f9:0x043d",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L2535DW"
+  },
+  "DCP-L2537DW": {
+    "usb_id": "0x4f9:0x0422",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L2537DW"
+  },
+  "DCP-L2540DN": {
+    "usb_id": "0x4f9:0x0326",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-L2540DN"
+  },
+  "DCP-L2540DW": {
+    "usb_id": "0x4f9:0x0328",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-L2540DW"
+  },
+  "DCP-L2550DN": {
+    "usb_id": "0x4f9:0x0423",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-L2550DN"
+  },
+  "DCP-L2550DW": {
+    "usb_id": "0x4f9:0x0424",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-L2550DW"
+  },
+  "DCP-L2551DN": {
+    "usb_id": "0x4f9:0x0425",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-L2551DN"
+  },
+  "DCP-L2560DW": {
+    "usb_id": "0x4f9:0x0329",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-L2560DW"
+  },
+  "DCP-L3510CDW": {
+    "usb_id": "0x4f9:0x044b",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-L3510CDW"
+  },
+  "DCP-L3550CDW": {
+    "usb_id": "0x4f9:0x0448",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-L3550CDW"
+  },
+  "DCP-L3551CDW": {
+    "usb_id": "0x4f9:0x044c",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-L3551CDW"
+  },
+  "DCP-L5500D": {
+    "usb_id": "0x4f9:0x0398",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L5500D"
+  },
+  "DCP-L5500DN": {
+    "usb_id": "0x4f9:0x0399",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L5500DN"
+  },
+  "DCP-L5502DN": {
+    "usb_id": "0x4f9:0x039a",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L5502DN"
+  },
+  "DCP-L5600DN": {
+    "usb_id": "0x4f9:0x039b",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L5600DN"
+  },
+  "DCP-L5602DN": {
+    "usb_id": "0x4f9:0x039c",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L5602DN"
+  },
+  "DCP-L5650DN": {
+    "usb_id": "0x4f9:0x039d",
+    "series": 317,
+    "type": 2,
+    "model_name": "DCP-L5650DN"
+  },
+  "DCP-L5652DN": {
+    "usb_id": "0x4f9:0x039e",
+    "series": 317,
+    "type": 2,
+    "model_name": "DCP-L5652DN"
+  },
+  "DCP-L6600DW": {
+    "usb_id": "0x4f9:0x039f",
+    "series": 317,
+    "type": 2,
+    "model_name": "DCP-L6600DW"
+  },
+  "DCP-L8400CDN": {
+    "usb_id": "0x4f9:0x030f",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L8400CDN"
+  },
+  "DCP-L8410CDW": {
+    "usb_id": "0x4f9:0x03f7",
+    "series": 217,
+    "type": 2,
+    "model_name": "DCP-L8410CDW"
+  },
+  "DCP-L8450CDW": {
+    "usb_id": "0x4f9:0x0310",
+    "series": 317,
+    "type": 2,
+    "model_name": "DCP-L8450CDW"
+  },
+  "DCP-T300": {
+    "usb_id": "0x4f9:0x0393",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-T300"
+  },
+  "DCP-T310": {
+    "usb_id": "0x4f9:0x040f",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-T310"
+  },
+  "DCP-T500W": {
+    "usb_id": "0x4f9:0x0394",
+    "series": 214,
+    "type": 2,
+    "model_name": "DCP-T500W"
+  },
+  "DCP-T510W": {
+    "usb_id": "0x4f9:0x0410",
+    "series": 218,
+    "type": 1,
+    "model_name": "DCP-T510W"
+  },
+  "DCP-T700W": {
+    "usb_id": "0x4f9:0x0395",
+    "series": 213,
+    "type": 2,
+    "model_name": "DCP-T700W"
+  },
+  "DCP-T710W": {
+    "usb_id": "0x4f9:0x0411",
+    "series": 217,
+    "type": 1,
+    "model_name": "DCP-T710W"
+  },
+  "FAX-2940": {
+    "usb_id": "0x4f9:0x02a6",
+    "series": 5,
+    "type": 1,
+    "model_name": "FAX-2940"
+  },
+  "FAX-2950": {
+    "usb_id": "0x4f9:0x02a7",
+    "series": 5,
+    "type": 1,
+    "model_name": "FAX-2950"
+  },
+  "FAX-2990": {
+    "usb_id": "0x4f9:0x02ab",
+    "series": 5,
+    "type": 1,
+    "model_name": "FAX-2990"
+  },
+  "FAX-7860DW": {
+    "usb_id": "0x4f9:0x0275",
+    "series": 13,
+    "type": 1,
+    "model_name": "FAX-7860DW"
+  },
+  "FAX-L2700DN": {
+    "usb_id": "0x4f9:0x0335",
+    "series": 213,
+    "type": 1,
+    "model_name": "FAX-L2700DN"
+  },
+  "FAX-L2710DN": {
+    "usb_id": "0x4f9:0x0427",
+    "series": 217,
+    "type": 1,
+    "model_name": "FAX-L2710DN"
+  },
+  "HL-2280DW": {
+    "usb_id": "0x4f9:0x0272",
+    "series": 14,
+    "type": 2,
+    "model_name": "HL-2280DW"
+  },
+  "HL-3180CDW": {
+    "usb_id": "0x4f9:0x03c1",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-3180CDW"
+  },
+  "HL-J6000CDW": {
+    "usb_id": "0x4f9:0x045f",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-J6000CDW"
+  },
+  "HL-J6000DW": {
+    "usb_id": "0x4f9:0x0452",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-J6000DW"
+  },
+  "HL-J6100DW": {
+    "usb_id": "0x4f9:0x0453",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-J6100DW"
+  },
+  "HL-L2380DW": {
+    "usb_id": "0x4f9:0x0330",
+    "series": 214,
+    "type": 2,
+    "model_name": "HL-L2380DW"
+  },
+  "HL-L2390DW": {
+    "usb_id": "0x4f9:0x0428",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-L2390DW"
+  },
+  "HL-L2395DW": {
+    "usb_id": "0x4f9:0x0429",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-L2395DW"
+  },
+  "HL-L3290CDW": {
+    "usb_id": "0x4f9:0x044a",
+    "series": 218,
+    "type": 1,
+    "model_name": "HL-L3290CDW"
+  },
+  "MFC-1810": {
+    "usb_id": "0x4f9:0x02d1",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-1810"
+  },
+  "MFC-1900": {
+    "usb_id": "0x4f9:0x0377",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1900"
+  },
+  "MFC-1906": {
+    "usb_id": "0x4f9:0x037a",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1906"
+  },
+  "MFC-1908": {
+    "usb_id": "0x4f9:0x037b",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1908"
+  },
+  "MFC-1910NW": {
+    "usb_id": "0x4f9:0x035e",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1910NW"
+  },
+  "MFC-1910W": {
+    "usb_id": "0x4f9:0x035d",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1910W"
+  },
+  "MFC-1919NW": {
+    "usb_id": "0x4f9:0x0361",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-1919NW"
+  },
+  "MFC-7240": {
+    "usb_id": "0x4f9:0x02a5",
+    "series": 5,
+    "type": 1,
+    "model_name": "MFC-7240"
+  },
+  "MFC-7290": {
+    "usb_id": "0x4f9:0x02a8",
+    "series": 5,
+    "type": 1,
+    "model_name": "MFC-7290"
+  },
+  "MFC-7360": {
+    "usb_id": "0x4f9:0x024d",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7360"
+  },
+  "MFC-7360N": {
+    "usb_id": "0x4f9:0x0270",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7360N"
+  },
+  "MFC-7362N": {
+    "usb_id": "0x4f9:0x028b",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7362N"
+  },
+  "MFC-7365DN": {
+    "usb_id": "0x4f9:0x0318",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7365DN"
+  },
+  "MFC-7380": {
+    "usb_id": "0x4f9:0x036b",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-7380"
+  },
+  "MFC-7390": {
+    "usb_id": "0x4f9:0x042a",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-7390"
+  },
+  "MFC-7460DN": {
+    "usb_id": "0x4f9:0x024e",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7460DN"
+  },
+  "MFC-7470D": {
+    "usb_id": "0x4f9:0x0271",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7470D"
+  },
+  "MFC-7480D": {
+    "usb_id": "0x4f9:0x036c",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-7480D"
+  },
+  "MFC-7490D": {
+    "usb_id": "0x4f9:0x042b",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-7490D"
+  },
+  "MFC-7860DN": {
+    "usb_id": "0x4f9:0x024c",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7860DN"
+  },
+  "MFC-7860DW": {
+    "usb_id": "0x4f9:0x024f",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-7860DW"
+  },
+  "MFC-7880DN": {
+    "usb_id": "0x4f9:0x036d",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-7880DN"
+  },
+  "MFC-7889DW": {
+    "usb_id": "0x4f9:0x036e",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-7889DW"
+  },
+  "MFC-7890DN": {
+    "usb_id": "0x4f9:0x042c",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-7890DN"
+  },
+  "MFC-7895DW": {
+    "usb_id": "0x4f9:0x042d",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-7895DW"
+  },
+  "MFC-8510DN": {
+    "usb_id": "0x4f9:0x0295",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-8510DN"
+  },
+  "MFC-8512DN": {
+    "usb_id": "0x4f9:0x02b8",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-8512DN"
+  },
+  "MFC-8515DN": {
+    "usb_id": "0x4f9:0x029c",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-8515DN"
+  },
+  "MFC-8520DN": {
+    "usb_id": "0x4f9:0x0296",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8520DN"
+  },
+  "MFC-8530DN": {
+    "usb_id": "0x4f9:0x03a2",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-8530DN"
+  },
+  "MFC-8535DN": {
+    "usb_id": "0x4f9:0x03a3",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-8535DN"
+  },
+  "MFC-8540DN": {
+    "usb_id": "0x4f9:0x03a6",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-8540DN"
+  },
+  "MFC-8690DW": {
+    "usb_id": "0x4f9:0x029a",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8690DW"
+  },
+  "MFC-8710DW": {
+    "usb_id": "0x4f9:0x02cb",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-8710DW"
+  },
+  "MFC-8712DW": {
+    "usb_id": "0x4f9:0x02ca",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-8712DW"
+  },
+  "MFC-8810DW": {
+    "usb_id": "0x4f9:0x02d4",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8810DW"
+  },
+  "MFC-8910DW": {
+    "usb_id": "0x4f9:0x0298",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8910DW"
+  },
+  "MFC-8912DW": {
+    "usb_id": "0x4f9:0x02ba",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8912DW"
+  },
+  "MFC-8950DW": {
+    "usb_id": "0x4f9:0x0299",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8950DW"
+  },
+  "MFC-8952DW": {
+    "usb_id": "0x4f9:0x02bb",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-8952DW"
+  },
+  "MFC-9125CN": {
+    "usb_id": "0x4f9:0x029e",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-9125CN"
+  },
+  "MFC-9130CW": {
+    "usb_id": "0x4f9:0x02ad",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-9130CW"
+  },
+  "MFC-9140CDN": {
+    "usb_id": "0x4f9:0x02ae",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-9140CDN"
+  },
+  "MFC-9142CDN": {
+    "usb_id": "0x4f9:0x0370",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-9142CDN"
+  },
+  "MFC-9150CDN": {
+    "usb_id": "0x4f9:0x0444",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-9150CDN"
+  },
+  "MFC-9325CW": {
+    "usb_id": "0x4f9:0x029f",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-9325CW"
+  },
+  "MFC-9330CDW": {
+    "usb_id": "0x4f9:0x02af",
+    "series": 17,
+    "type": 1,
+    "model_name": "MFC-9330CDW"
+  },
+  "MFC-9332CDW": {
+    "usb_id": "0x4f9:0x0371",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-9332CDW"
+  },
+  "MFC-9335CDW": {
+    "usb_id": "0x4f9:0x03c5",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-9335CDW"
+  },
+  "MFC-9340CDW": {
+    "usb_id": "0x4f9:0x02b0",
+    "series": 117,
+    "type": 1,
+    "model_name": "MFC-9340CDW"
+  },
+  "MFC-9342CDW": {
+    "usb_id": "0x4f9:0x0372",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-9342CDW"
+  },
+  "MFC-9350CDW": {
+    "usb_id": "0x4f9:0x0440",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-9350CDW"
+  },
+  "MFC-9460CDN": {
+    "usb_id": "0x4f9:0x0243",
+    "series": 16,
+    "type": 1,
+    "model_name": "MFC-9460CDN"
+  },
+  "MFC-9465CDN": {
+    "usb_id": "0x4f9:0x0244",
+    "series": 116,
+    "type": 1,
+    "model_name": "MFC-9465CDN"
+  },
+  "MFC-9560CDW": {
+    "usb_id": "0x4f9:0x0245",
+    "series": 116,
+    "type": 1,
+    "model_name": "MFC-9560CDW"
+  },
+  "MFC-9970CDW": {
+    "usb_id": "0x4f9:0x0246",
+    "series": 116,
+    "type": 1,
+    "model_name": "MFC-9970CDW"
+  },
+  "MFC-B7700D": {
+    "usb_id": "0x4f9:0x042e",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-B7700D"
+  },
+  "MFC-B7710DN": {
+    "usb_id": "0x4f9:0x04e7",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-B7710DN"
+  },
+  "MFC-B7715DW": {
+    "usb_id": "0x4f9:0x0430",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-B7715DW"
+  },
+  "MFC-B7720DN": {
+    "usb_id": "0x4f9:0x0431",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-B7720DN"
+  },
+  "MFC-J1300DW": {
+    "usb_id": "0x4f9:0x040b",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J1300DW"
+  },
+  "MFC-J1500N": {
+    "usb_id": "0x4f9:0x040e",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J1500N"
+  },
+  "MFC-J1605DN": {
+    "usb_id": "0x4f9:0x0465",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J1605DN"
+  },
+  "MFC-J200": {
+    "usb_id": "0x4f9:0x02fe",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J200"
+  },
+  "MFC-J2310": {
+    "usb_id": "0x4f9:0x02cc",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J2310"
+  },
+  "MFC-J2320": {
+    "usb_id": "0x4f9:0x033c",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J2320"
+  },
+  "MFC-J2330DW": {
+    "usb_id": "0x4f9:0x03e6",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J2330DW"
+  },
+  "MFC-J245": {
+    "usb_id": "0x4f9:0x02e7",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J245"
+  },
+  "MFC-J2510": {
+    "usb_id": "0x4f9:0x02cd",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J2510"
+  },
+  "MFC-J2720": {
+    "usb_id": "0x4f9:0x0341",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J2720"
+  },
+  "MFC-J2730DW": {
+    "usb_id": "0x4f9:0x03e7",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J2730DW"
+  },
+  "MFC-J280W": {
+    "usb_id": "0x4f9:0x027f",
+    "series": 14,
+    "type": 1,
+    "model_name": "MFC-J280W"
+  },
+  "MFC-J285DW": {
+    "usb_id": "0x4f9:0x02ea",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J285DW"
+  },
+  "MFC-J3520": {
+    "usb_id": "0x4f9:0x02ff",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J3520"
+  },
+  "MFC-J3530DW": {
+    "usb_id": "0x4f9:0x03e2",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J3530DW"
+  },
+  "MFC-J3720": {
+    "usb_id": "0x4f9:0x0300",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J3720"
+  },
+  "MFC-J3930DW": {
+    "usb_id": "0x4f9:0x03e3",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J3930DW"
+  },
+  "MFC-J425W": {
+    "usb_id": "0x4f9:0x028f",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J425W"
+  },
+  "MFC-J430W": {
+    "usb_id": "0x4f9:0x0281",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J430W"
+  },
+  "MFC-J4310DW": {
+    "usb_id": "0x4f9:0x02c3",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J4310DW"
+  },
+  "MFC-J4320DW": {
+    "usb_id": "0x4f9:0x033a",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J4320DW"
+  },
+  "MFC-J432W": {
+    "usb_id": "0x4f9:0x0290",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J432W"
+  },
+  "MFC-J435W": {
+    "usb_id": "0x4f9:0x0280",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J435W"
+  },
+  "MFC-J4410DW": {
+    "usb_id": "0x4f9:0x02c4",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4410DW"
+  },
+  "MFC-J4420DW": {
+    "usb_id": "0x4f9:0x033d",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4420DW"
+  },
+  "MFC-J450DW": {
+    "usb_id": "0x4f9:0x02fa",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J450DW"
+  },
+  "MFC-J4510DW": {
+    "usb_id": "0x4f9:0x02b3",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4510DW"
+  },
+  "MFC-J4510N": {
+    "usb_id": "0x4f9:0x02c7",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4510N"
+  },
+  "MFC-J4520DW": {
+    "usb_id": "0x4f9:0x0365",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4520DW"
+  },
+  "MFC-J460DW": {
+    "usb_id": "0x4f9:0x0386",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J460DW"
+  },
+  "MFC-J4610DW": {
+    "usb_id": "0x4f9:0x02c5",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4610DW"
+  },
+  "MFC-J4620DW": {
+    "usb_id": "0x4f9:0x0340",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4620DW"
+  },
+  "MFC-J4625DW": {
+    "usb_id": "0x4f9:0x0342",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4625DW"
+  },
+  "MFC-J470DW": {
+    "usb_id": "0x4f9:0x02e8",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J470DW"
+  },
+  "MFC-J4710DW": {
+    "usb_id": "0x4f9:0x02b4",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J4710DW"
+  },
+  "MFC-J4720N": {
+    "usb_id": "0x4f9:0x034b",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4720N"
+  },
+  "MFC-J4725N": {
+    "usb_id": "0x4f9:0x034c",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4725N"
+  },
+  "MFC-J475DW": {
+    "usb_id": "0x4f9:0x02e9",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J475DW"
+  },
+  "MFC-J480DW": {
+    "usb_id": "0x4f9:0x0384",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J480DW"
+  },
+  "MFC-J4810DN": {
+    "usb_id": "0x4f9:0x02c9",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J4810DN"
+  },
+  "MFC-J485DW": {
+    "usb_id": "0x4f9:0x0385",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J485DW"
+  },
+  "MFC-J4910CDW": {
+    "usb_id": "0x4f9:0x02c8",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J4910CDW"
+  },
+  "MFC-J491DW": {
+    "usb_id": "0x4f9:0x03f9",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J491DW"
+  },
+  "MFC-J497DW": {
+    "usb_id": "0x4f9:0x0402",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J497DW"
+  },
+  "MFC-J5320DW": {
+    "usb_id": "0x4f9:0x0343",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5320DW"
+  },
+  "MFC-J5330DW": {
+    "usb_id": "0x4f9:0x03d3",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5330DW"
+  },
+  "MFC-J5335DW": {
+    "usb_id": "0x4f9:0x03e5",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5335DW"
+  },
+  "MFC-J5520DW": {
+    "usb_id": "0x4f9:0x0366",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5520DW"
+  },
+  "MFC-J5620CDW": {
+    "usb_id": "0x4f9:0x0350",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5620CDW"
+  },
+  "MFC-J5620DW": {
+    "usb_id": "0x4f9:0x0346",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5620DW"
+  },
+  "MFC-J5625DW": {
+    "usb_id": "0x4f9:0x0364",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5625DW"
+  },
+  "MFC-J5630CDW": {
+    "usb_id": "0x4f9:0x045c",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J5630CDW"
+  },
+  "MFC-J5720CDW": {
+    "usb_id": "0x4f9:0x034e",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J5720CDW"
+  },
+  "MFC-J5720DW": {
+    "usb_id": "0x4f9:0x0347",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J5720DW"
+  },
+  "MFC-J5730DW": {
+    "usb_id": "0x4f9:0x03d5",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J5730DW"
+  },
+  "MFC-J5820DN": {
+    "usb_id": "0x4f9:0x034f",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5820DN"
+  },
+  "MFC-J5830DW": {
+    "usb_id": "0x4f9:0x03e8",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J5830DW"
+  },
+  "MFC-J5845DW": {
+    "usb_id": "0x4f9:0x044d",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J5845DW"
+  },
+  "MFC-J5910CDW": {
+    "usb_id": "0x4f9:0x0289",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J5910CDW"
+  },
+  "MFC-J5910DW": {
+    "usb_id": "0x4f9:0x0288",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J5910DW"
+  },
+  "MFC-J5920DW": {
+    "usb_id": "0x4f9:0x0390",
+    "series": 313,
+    "type": 2,
+    "model_name": "MFC-J5920DW"
+  },
+  "MFC-J5930DW": {
+    "usb_id": "0x4f9:0x03d6",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J5930DW"
+  },
+  "MFC-J5945DW": {
+    "usb_id": "0x4f9:0x044e",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J5945DW"
+  },
+  "MFC-J625DW": {
+    "usb_id": "0x4f9:0x0282",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J625DW"
+  },
+  "MFC-J650DW": {
+    "usb_id": "0x4f9:0x02eb",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J650DW"
+  },
+  "MFC-J6510DW": {
+    "usb_id": "0x4f9:0x0262",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J6510DW"
+  },
+  "MFC-J6520DW": {
+    "usb_id": "0x4f9:0x02f2",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6520DW"
+  },
+  "MFC-J6530DW": {
+    "usb_id": "0x4f9:0x03e0",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6530DW"
+  },
+  "MFC-J6535DW": {
+    "usb_id": "0x4f9:0x03e4",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6535DW"
+  },
+  "MFC-J6545DW": {
+    "usb_id": "0x4f9:0x044f",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J6545DW"
+  },
+  "MFC-J6570CDW": {
+    "usb_id": "0x4f9:0x02f3",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6570CDW"
+  },
+  "MFC-J6573CDW": {
+    "usb_id": "0x4f9:0x03b4",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6573CDW"
+  },
+  "MFC-J6580CDW": {
+    "usb_id": "0x4f9:0x03cf",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6580CDW"
+  },
+  "MFC-J6583CDW": {
+    "usb_id": "0x4f9:0x045d",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J6583CDW"
+  },
+  "MFC-J6710CDW": {
+    "usb_id": "0x4f9:0x0266",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J6710CDW"
+  },
+  "MFC-J6710DW": {
+    "usb_id": "0x4f9:0x0263",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J6710DW"
+  },
+  "MFC-J6720DW": {
+    "usb_id": "0x4f9:0x02f4",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6720DW"
+  },
+  "MFC-J6730DW": {
+    "usb_id": "0x4f9:0x03cd",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6730DW"
+  },
+  "MFC-J6770CDW": {
+    "usb_id": "0x4f9:0x02f8",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J6770CDW"
+  },
+  "MFC-J680DW": {
+    "usb_id": "0x4f9:0x0388",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J680DW"
+  },
+  "MFC-J690DW": {
+    "usb_id": "0x4f9:0x0404",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J690DW"
+  },
+  "MFC-J6910CDW": {
+    "usb_id": "0x4f9:0x0268",
+    "series": 113,
+    "type": 1,
+    "model_name": "MFC-J6910CDW"
+  },
+  "MFC-J6910DW": {
+    "usb_id": "0x4f9:0x0267",
+    "series": 113,
+    "type": 1,
+    "model_name": "MFC-J6910DW"
+  },
+  "MFC-J6920DW": {
+    "usb_id": "0x4f9:0x02f5",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6920DW"
+  },
+  "MFC-J6925DW": {
+    "usb_id": "0x4f9:0x03b3",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6925DW"
+  },
+  "MFC-J6930DW": {
+    "usb_id": "0x4f9:0x03cb",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6930DW"
+  },
+  "MFC-J6935DW": {
+    "usb_id": "0x4f9:0x03cc",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6935DW"
+  },
+  "MFC-J6945DW": {
+    "usb_id": "0x4f9:0x0450",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J6945DW"
+  },
+  "MFC-J6947DW": {
+    "usb_id": "0x4f9:0x0451",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J6947DW"
+  },
+  "MFC-J6970CDW": {
+    "usb_id": "0x4f9:0x02f6",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6970CDW"
+  },
+  "MFC-J6973CDW": {
+    "usb_id": "0x4f9:0x03b5",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6973CDW"
+  },
+  "MFC-J6975CDW": {
+    "usb_id": "0x4f9:0x02f7",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6975CDW"
+  },
+  "MFC-J6980CDW": {
+    "usb_id": "0x4f9:0x03d0",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6980CDW"
+  },
+  "MFC-J6983CDW": {
+    "usb_id": "0x4f9:0x045e",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J6983CDW"
+  },
+  "MFC-J6990CDW": {
+    "usb_id": "0x4f9:0x03b6",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6990CDW"
+  },
+  "MFC-J6995CDW": {
+    "usb_id": "0x4f9:0x03d1",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-J6995CDW"
+  },
+  "MFC-J6997CDW": {
+    "usb_id": "0x4f9:0x0456",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J6997CDW"
+  },
+  "MFC-J6999CDW": {
+    "usb_id": "0x4f9:0x0457",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-J6999CDW"
+  },
+  "MFC-J705D": {
+    "usb_id": "0x4f9:0x0285",
+    "series": 14,
+    "type": 1,
+    "model_name": "MFC-J705D"
+  },
+  "MFC-J710D": {
+    "usb_id": "0x4f9:0x02be",
+    "series": 14,
+    "type": 1,
+    "model_name": "MFC-J710D"
+  },
+  "MFC-J720D": {
+    "usb_id": "0x4f9:0x02ee",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J720D"
+  },
+  "MFC-J727D": {
+    "usb_id": "0x4f9:0x0357",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J727D"
+  },
+  "MFC-J730DN": {
+    "usb_id": "0x4f9:0x038c",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J730DN"
+  },
+  "MFC-J737DN": {
+    "usb_id": "0x4f9:0x03ee",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J737DN"
+  },
+  "MFC-J738DN": {
+    "usb_id": "0x4f9:0x0463",
+    "series": 218,
+    "type": 1,
+    "model_name": "MFC-J738DN"
+  },
+  "MFC-J775DW": {
+    "usb_id": "0x4f9:0x043e",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J775DW"
+  },
+  "MFC-J805DW": {
+    "usb_id": "0x4f9:0x0467",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J805DW"
+  },
+  "MFC-J810DN": {
+    "usb_id": "0x4f9:0x02b2",
+    "series": 14,
+    "type": 1,
+    "model_name": "MFC-J810DN"
+  },
+  "MFC-J815DW": {
+    "usb_id": "0x4f9:0x0466",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J815DW"
+  },
+  "MFC-J820DN": {
+    "usb_id": "0x4f9:0x02ef",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J820DN"
+  },
+  "MFC-J825DW": {
+    "usb_id": "0x4f9:0x0283",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J825DW"
+  },
+  "MFC-J825N": {
+    "usb_id": "0x4f9:0x0284",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J825N"
+  },
+  "MFC-J827DN": {
+    "usb_id": "0x4f9:0x0359",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J827DN"
+  },
+  "MFC-J830DN": {
+    "usb_id": "0x4f9:0x038e",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J830DN"
+  },
+  "MFC-J835DW": {
+    "usb_id": "0x4f9:0x028d",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J835DW"
+  },
+  "MFC-J837DN": {
+    "usb_id": "0x4f9:0x03ef",
+    "series": 214,
+    "type": 1,
+    "model_name": "MFC-J837DN"
+  },
+  "MFC-J840N": {
+    "usb_id": "0x4f9:0x02bf",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J840N"
+  },
+  "MFC-J860DN": {
+    "usb_id": "0x4f9:0x0287",
+    "series": 14,
+    "type": 1,
+    "model_name": "MFC-J860DN"
+  },
+  "MFC-J870DW": {
+    "usb_id": "0x4f9:0x02ec",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J870DW"
+  },
+  "MFC-J870N": {
+    "usb_id": "0x4f9:0x02ed",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J870N"
+  },
+  "MFC-J875DW": {
+    "usb_id": "0x4f9:0x02fb",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J875DW"
+  },
+  "MFC-J877N": {
+    "usb_id": "0x4f9:0x0356",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J877N"
+  },
+  "MFC-J880DW": {
+    "usb_id": "0x4f9:0x0389",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J880DW"
+  },
+  "MFC-J880N": {
+    "usb_id": "0x4f9:0x038b",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J880N"
+  },
+  "MFC-J885DW": {
+    "usb_id": "0x4f9:0x038a",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J885DW"
+  },
+  "MFC-J887N": {
+    "usb_id": "0x4f9:0x03f0",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J887N"
+  },
+  "MFC-J890DN": {
+    "usb_id": "0x4f9:0x02f1",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J890DN"
+  },
+  "MFC-J890DW": {
+    "usb_id": "0x4f9:0x0403",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J890DW"
+  },
+  "MFC-J893N": {
+    "usb_id": "0x4f9:0x0408",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J893N"
+  },
+  "MFC-J895DW": {
+    "usb_id": "0x4f9:0x03f8",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J895DW"
+  },
+  "MFC-J897DN": {
+    "usb_id": "0x4f9:0x035a",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J897DN"
+  },
+  "MFC-J898N": {
+    "usb_id": "0x4f9:0x0462",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J898N"
+  },
+  "MFC-J900DN": {
+    "usb_id": "0x4f9:0x038f",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J900DN"
+  },
+  "MFC-J903N": {
+    "usb_id": "0x4f9:0x0470",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J903N"
+  },
+  "MFC-J907DN": {
+    "usb_id": "0x4f9:0x03f1",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J907DN"
+  },
+  "MFC-J955DN": {
+    "usb_id": "0x4f9:0x027e",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J955DN"
+  },
+  "MFC-J960DN": {
+    "usb_id": "0x4f9:0x02c1",
+    "series": 13,
+    "type": 1,
+    "model_name": "MFC-J960DN"
+  },
+  "MFC-J980DN": {
+    "usb_id": "0x4f9:0x02f0",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J980DN"
+  },
+  "MFC-J985DW": {
+    "usb_id": "0x4f9:0x03c9",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J985DW"
+  },
+  "MFC-J987DN": {
+    "usb_id": "0x4f9:0x0358",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J987DN"
+  },
+  "MFC-J990DN": {
+    "usb_id": "0x4f9:0x038d",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J990DN"
+  },
+  "MFC-J995DW": {
+    "usb_id": "0x4f9:0x040a",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J995DW"
+  },
+  "MFC-J997DN": {
+    "usb_id": "0x4f9:0x03f2",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-J997DN"
+  },
+  "MFC-J998DN": {
+    "usb_id": "0x4f9:0x0464",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-J998DN"
+  },
+  "MFC-L2680W": {
+    "usb_id": "0x4f9:0x03bb",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2680W"
+  },
+  "MFC-L2685DW": {
+    "usb_id": "0x4f9:0x03fa",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2685DW"
+  },
+  "MFC-L2690DW": {
+    "usb_id": "0x4f9:0x0432",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2690DW"
+  },
+  "MFC-L2700D": {
+    "usb_id": "0x4f9:0x0373",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2700D"
+  },
+  "MFC-L2700DN": {
+    "usb_id": "0x4f9:0x03bc",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2700DN"
+  },
+  "MFC-L2700DW": {
+    "usb_id": "0x4f9:0x0331",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2700DW"
+  },
+  "MFC-L2705DW": {
+    "usb_id": "0x4f9:0x0392",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2705DW"
+  },
+  "MFC-L2707DW": {
+    "usb_id": "0x4f9:0x03e1",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2707DW"
+  },
+  "MFC-L2710DN": {
+    "usb_id": "0x4f9:0x0433",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2710DN"
+  },
+  "MFC-L2710DW": {
+    "usb_id": "0x4f9:0x0434",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2710DW"
+  },
+  "MFC-L2713DW": {
+    "usb_id": "0x4f9:0x0435",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2713DW"
+  },
+  "MFC-L2715D": {
+    "usb_id": "0x4f9:0x0436",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2715D"
+  },
+  "MFC-L2715DW": {
+    "usb_id": "0x4f9:0x043c",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2715DW"
+  },
+  "MFC-L2717DW": {
+    "usb_id": "0x4f9:0x0437",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2717DW"
+  },
+  "MFC-L2720DN": {
+    "usb_id": "0x4f9:0x0338",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2720DN"
+  },
+  "MFC-L2720DW": {
+    "usb_id": "0x4f9:0x0337",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-L2720DW"
+  },
+  "MFC-L2730DN": {
+    "usb_id": "0x4f9:0x0438",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2730DN"
+  },
+  "MFC-L2730DW": {
+    "usb_id": "0x4f9:0x0439",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L2730DW"
+  },
+  "MFC-L2740DW": {
+    "usb_id": "0x4f9:0x0320",
+    "series": 313,
+    "type": 1,
+    "model_name": "MFC-L2740DW"
+  },
+  "MFC-L2750DW": {
+    "usb_id": "0x4f9:0x043a",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L2750DW"
+  },
+  "MFC-L2759DW": {
+    "usb_id": "0x4f9:0x0526",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L2759DW"
+  },
+  "MFC-L2770DW": {
+    "usb_id": "0x4f9:0x043b",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L2770DW"
+  },
+  "MFC-L3710CW": {
+    "usb_id": "0x4f9:0x0446",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L3710CW"
+  },
+  "MFC-L3730CDN": {
+    "usb_id": "0x4f9:0x0445",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L3730CDN"
+  },
+  "MFC-L3735CDN": {
+    "usb_id": "0x4f9:0x0443",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L3735CDN"
+  },
+  "MFC-L3745CDW": {
+    "usb_id": "0x4f9:0x0442",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L3745CDW"
+  },
+  "MFC-L3750CDW": {
+    "usb_id": "0x4f9:0x0441",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L3750CDW"
+  },
+  "MFC-L3770CDW": {
+    "usb_id": "0x4f9:0x043f",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L3770CDW"
+  },
+  "MFC-L5700DN": {
+    "usb_id": "0x4f9:0x03a0",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L5700DN"
+  },
+  "MFC-L5700DW": {
+    "usb_id": "0x4f9:0x03c6",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L5700DW"
+  },
+  "MFC-L5702DW": {
+    "usb_id": "0x4f9:0x03c7",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L5702DW"
+  },
+  "MFC-L5705DW": {
+    "usb_id": "0x4f9:0x04e2",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5705DW"
+  },
+  "MFC-L5750DW": {
+    "usb_id": "0x4f9:0x03a5",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5750DW"
+  },
+  "MFC-L5755DW": {
+    "usb_id": "0x4f9:0x03b2",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5755DW"
+  },
+  "MFC-L5800DW": {
+    "usb_id": "0x4f9:0x03a7",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L5800DW"
+  },
+  "MFC-L5802DW": {
+    "usb_id": "0x4f9:0x03a8",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L5802DW"
+  },
+  "MFC-L5850DW": {
+    "usb_id": "0x4f9:0x03a9",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5850DW"
+  },
+  "MFC-L5900DW": {
+    "usb_id": "0x4f9:0x03aa",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5900DW"
+  },
+  "MFC-L5902DW": {
+    "usb_id": "0x4f9:0x03ab",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L5902DW"
+  },
+  "MFC-L6700DW": {
+    "usb_id": "0x4f9:0x03ac",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6700DW"
+  },
+  "MFC-L6702DW": {
+    "usb_id": "0x4f9:0x03ad",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6702DW"
+  },
+  "MFC-L6750DW": {
+    "usb_id": "0x4f9:0x03ae",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6750DW"
+  },
+  "MFC-L6800DW": {
+    "usb_id": "0x4f9:0x03af",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6800DW"
+  },
+  "MFC-L6900DW": {
+    "usb_id": "0x4f9:0x03b0",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6900DW"
+  },
+  "MFC-L6902DW": {
+    "usb_id": "0x4f9:0x03b1",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L6902DW"
+  },
+  "MFC-L8600CDW": {
+    "usb_id": "0x4f9:0x0311",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L8600CDW"
+  },
+  "MFC-L8610CDW": {
+    "usb_id": "0x4f9:0x03f6",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-L8610CDW"
+  },
+  "MFC-L8650CDW": {
+    "usb_id": "0x4f9:0x0312",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L8650CDW"
+  },
+  "MFC-L8690CDW": {
+    "usb_id": "0x4f9:0x03f5",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L8690CDW"
+  },
+  "MFC-L8850CDW": {
+    "usb_id": "0x4f9:0x0313",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L8850CDW"
+  },
+  "MFC-L8900CDW": {
+    "usb_id": "0x4f9:0x03f4",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L8900CDW"
+  },
+  "MFC-L9550CDW": {
+    "usb_id": "0x4f9:0x0314",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L9550CDW"
+  },
+  "MFC-L9570CDW": {
+    "usb_id": "0x4f9:0x03f3",
+    "series": 317,
+    "type": 1,
+    "model_name": "MFC-L9570CDW"
+  },
+  "MFC-T4500DW": {
+    "usb_id": "0x4f9:0x0454",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-T4500DW"
+  },
+  "MFC-T800W": {
+    "usb_id": "0x4f9:0x0396",
+    "series": 213,
+    "type": 1,
+    "model_name": "MFC-T800W"
+  },
+  "MFC-T810W": {
+    "usb_id": "0x4f9:0x0412",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-T810W"
+  },
+  "MFC-T910DW": {
+    "usb_id": "0x4f9:0x0413",
+    "series": 217,
+    "type": 1,
+    "model_name": "MFC-T910DW"
   }
 }

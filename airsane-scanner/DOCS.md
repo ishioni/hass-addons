@@ -23,6 +23,8 @@ This add-on does **not** currently support:
 
 Supported models are the ones shipped in the add-on's built-in model catalog and corresponding patched `brscan` data.
 
+That catalog is now derived from Brother's `brscan4` ini files (main file plus extension ini files), rather than from a tiny hand-maintained subset.
+
 ## Configuration
 
 Example:
@@ -88,6 +90,7 @@ Users should configure the add-on through Home Assistant options, not by editing
 ## Notes
 
 - This add-on currently focuses on Brother network scanners
+- The built-in model catalog is broad because it is derived from Brother's `brscan4` ini inventory; actual success still depends on your device supporting network scanning
 - Higher scan resolutions may be device-dependent and can be slow on older scanners
 - AirSane only works once the underlying SANE backend can see the device
 - Setting add-on `log_level` to `debug` or `trace` also enables AirSane's own debug output

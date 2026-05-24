@@ -28,6 +28,7 @@ The following has been proven:
 - generate runtime config from `/data/options.json`
 - use host networking for AirSane and mDNS/Avahi
 - rely on a curated built-in Brother model catalog rather than runtime model overrides
+- derive that catalog from Brother's `brscan4` ini files instead of maintaining a tiny hand-written subset
 
 ## Known quirks / caveats
 
@@ -46,7 +47,7 @@ The following has been proven:
 
 ### 2. Improve built-in model catalog
 
-- extend `known_models.json` from Brother `brscan4` package metadata
+- keep `known_models.json` in sync with Brother `brscan4` package metadata
 - document the source of model IDs and series/type mappings
 - consider upstreaming missing models to `brscan`
 

@@ -16,6 +16,7 @@ The add-on scaffold now includes:
 - startup logging for rendered config output
 - best-effort application of scanner default mode/resolution settings
 - curated built-in Brother model support instead of runtime model override definitions
+- a broad built-in Brother model catalog derived from Brother's `brscan4` ini inventory
 
 ## Files
 

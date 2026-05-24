@@ -1,0 +1,17 @@
+diff --git a/data/Brsane.ini b/data/Brsane.ini
+index d81eb66..fb3753a 100644
+--- a/data/Brsane.ini
++++ b/data/Brsane.ini
+@@ -59,6 +59,12 @@
+ 0x015f,6,1,"MFC-8440"
+ 0x0160,6,1,"MFC-8840D"
+ 0x02d0,14,2,"DCP-1510"
++0x0248,14,2,"DCP-7055"
++0x02ce,14,2,"DCP-7055W"
++0x0273,14,2,"DCP-7057"
++0x02cf,14,2,"DCP-7057W"
++0x0249,14,2,"DCP-7060D"
++0x0277,14,2,"DCP-7070DW"
+ 
+ 
+ [ModelTypeName]

@@ -1,0 +1,44 @@
+{
+  "DCP-7055": {
+    "usb_id": "0x4f9:0x0248",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7055"
+  },
+  "DCP-7055W": {
+    "usb_id": "0x4f9:0x02ce",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7055W"
+  },
+  "DCP-7057": {
+    "usb_id": "0x4f9:0x0273",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7057"
+  },
+  "DCP-7057W": {
+    "usb_id": "0x4f9:0x02cf",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7057W"
+  },
+  "DCP-7060D": {
+    "usb_id": "0x4f9:0x0249",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7060D"
+  },
+  "DCP-7065DN": {
+    "usb_id": "0x4f9:0x024a",
+    "series": 13,
+    "type": 2,
+    "model_name": "DCP-7065DN"
+  },
+  "DCP-7070DW": {
+    "usb_id": "0x4f9:0x0277",
+    "series": 14,
+    "type": 2,
+    "model_name": "DCP-7070DW"
+  }
+}

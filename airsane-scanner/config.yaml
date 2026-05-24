@@ -1,0 +1,30 @@
+---
+version: 0.1.0
+slug: airsane_scanner
+name: AirSane Scanner
+description: Publish configured SANE scanners to macOS and other AirScan/eSCL clients
+url: https://github.com/ishioni/hass-addons/
+arch:
+  - amd64
+  - aarch64
+image: ghcr.io/ishioni/hass-addon-airsane-scanner-{arch}
+init: false
+host_network: true
+hassio_api: true
+ports:
+  8090/tcp: 8090
+ports_description:
+  8090/tcp: AirSane web UI and eSCL endpoint
+options:
+  log_level: info
+  scanners: []
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  scanners:
+    - name: str
+      host: str
+      model: str
+      enabled: bool?
+      defaults:
+        mode: list(color|gray|bw)?
+        resolution: int(75,1200)?

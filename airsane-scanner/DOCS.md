@@ -14,6 +14,8 @@ It is designed around a generated configuration model:
 
 This first version targets Brother network scanners through the open-source `brscan` backend and publishes them through AirSane.
 
+That means each configured scanner is expected to be reachable over the network, so `host` is currently required for every scanner entry.
+
 ## Configuration
 
 Example:
@@ -39,12 +41,27 @@ scanners:
 ### Scanner fields
 
 - `name`: Friendly identifier used in generated config and logs. Use only letters, numbers, `.`, `_`, or `-`.
-- `host`: Scanner IP address or hostname
+- `host`: Scanner IP address or hostname. Required in the current implementation because this add-on currently supports network scanners only.
 - `model`: Known built-in model name
 - `enabled`: Optional, defaults to `true`
 - `defaults.mode`: Optional AirSane/SANE default mode hint. Supported values: `color`, `gray`, `bw`
 - `defaults.resolution`: Optional AirSane/SANE default resolution hint
 - `model_override`: Advanced escape hatch for unsupported models
+
+### Model override semantics
+
+`model_override` does **not** switch the add-on into a USB-connected mode.
+
+The current add-on still expects a **network** scanner and still requires `host`.
+The `usb_id` field here is unfortunate but intentional: it is Brother backend **model metadata** used to generate the `brscan` model catalog, even for network scanners.
+
+So in practice:
+
+- `host` answers **where the scanner is on the network**
+- `model` or `model_override` answers **which Brother backend definition to use**
+- `usb_id` is part of that Brother model definition, not a transport selector
+
+USB-connected scanners are **not** a supported configuration mode in this add-on today.
 
 Example override:
 

@@ -7,7 +7,7 @@ Create a Home Assistant add-on that:
 - configures Brother network scanners through the open-source `brscan` backend
 - publishes them through `AirSane` as AirScan/eSCL scanners
 - uses Home Assistant add-on options as the source of truth
-- generates Brother, SANE, and AirSane config files at runtime
+- generates network backend, SANE, and AirSane config files at runtime
 
 ## Current status
 
@@ -27,13 +27,14 @@ The following has been proven:
 - keep the add-on runtime simple (`run.sh`), matching the style of the existing `cups` add-on
 - generate runtime config from `/data/options.json`
 - use host networking for AirSane and mDNS/Avahi
+- rely on a curated built-in Brother model catalog rather than runtime model overrides
 
 ## Known quirks / caveats
 
 - the Home Assistant base image expects Supervisor APIs during normal startup, so plain local `docker run` is not a perfect simulation of in-HA boot
 - AirSane's web UI intentionally shows a reduced resolution list even when the backend/eSCL capabilities expose more values
 - very high resolutions on older Brother devices may be unstable or too slow; 600 dpi looked reasonable in testing
-- current scaffold uses the repo's `BRSANESUFFIX=2` layout, so generated Brother files currently target `models2` / `brsanenetdevice2.cfg`
+- current scaffold uses the repo's `BRSANESUFFIX=2` layout, so generated Brother files currently target `brsanenetdevice2.cfg`
 
 ## Next steps
 
@@ -41,12 +42,13 @@ The following has been proven:
 
 - validate nested `scanners` entries more strictly
 - decide how much of AirSane should be user-configurable in v1
-- decide whether to expose manual model overrides in UI/docs as advanced-only
+- consider whether model selection should be restricted to an enumerated catalog in UI/docs
 
 ### 2. Improve built-in model catalog
 
 - extend `known_models.json` from Brother `brscan4` package metadata
 - document the source of model IDs and series/type mappings
+- consider upstreaming missing models to `brscan`
 
 ### 3. Runtime hardening
 

@@ -7,14 +7,21 @@ This add-on exposes configured SANE scanners to AirScan/eSCL clients such as mac
 It is designed around a generated configuration model:
 
 - Home Assistant add-on options define scanners at a high level
-- the add-on generates Brother backend, SANE, and AirSane config files at startup
+- the add-on generates Brother network backend, SANE, and AirSane config files at startup
 - AirSane publishes working SANE devices on the local network
 
 ## Current scope
 
-This first version targets Brother network scanners through the open-source `brscan` backend and publishes them through AirSane.
+This first version targets curated Brother network scanners through the open-source `brscan` backend and publishes them through AirSane.
 
-That means each configured scanner is expected to be reachable over the network, so `host` is currently required for every scanner entry.
+That means each configured scanner is expected to be reachable over the network, so `host` is required for every scanner entry.
+
+This add-on does **not** currently support:
+
+- USB-connected scanner configuration
+- arbitrary manual Brother model definitions through add-on options
+
+Supported models are the ones shipped in the add-on's built-in model catalog and corresponding patched `brscan` data.
 
 ## Configuration
 
@@ -41,41 +48,11 @@ scanners:
 ### Scanner fields
 
 - `name`: Friendly identifier used in generated config and logs. Use only letters, numbers, `.`, `_`, or `-`.
-- `host`: Scanner IP address or hostname. Required in the current implementation because this add-on currently supports network scanners only.
-- `model`: Known built-in model name
+- `host`: Scanner IP address or hostname. Required because this add-on currently supports network scanners only.
+- `model`: Known built-in Brother model name from the add-on catalog.
 - `enabled`: Optional, defaults to `true`
 - `defaults.mode`: Optional AirSane/SANE default mode hint. Supported values: `color`, `gray`, `bw`
 - `defaults.resolution`: Optional AirSane/SANE default resolution hint
-- `model_override`: Advanced escape hatch for unsupported models
-
-### Model override semantics
-
-`model_override` does **not** switch the add-on into a USB-connected mode.
-
-The current add-on still expects a **network** scanner and still requires `host`.
-The `usb_id` field here is unfortunate but intentional: it is Brother backend **model metadata** used to generate the `brscan` model catalog, even for network scanners.
-
-So in practice:
-
-- `host` answers **where the scanner is on the network**
-- `model` or `model_override` answers **which Brother backend definition to use**
-- `usb_id` is part of that Brother model definition, not a transport selector
-
-USB-connected scanners are **not** a supported configuration mode in this add-on today.
-
-Example override:
-
-```yaml
-scanners:
-  - name: custom_brother
-    host: 192.168.1.50
-    enabled: true
-    model_override:
-      usb_id: 0x4f9:0x02ce
-      series: 14
-      type: 2
-      model_name: DCP-7055W
-```
 
 ### Notes about defaults
 
@@ -100,7 +77,6 @@ Port exposed:
 The add-on generates runtime files for:
 
 - `/etc/sane.d/dll.conf`
-- `/usr/share/sane/brother/models2/zz-hass-models.ini`
 - `/usr/share/sane/brother/brsanenetdevice2.cfg`
 - `/etc/default/airsane`
 - `/etc/airsane/options.conf`
@@ -115,3 +91,4 @@ Users should configure the add-on through Home Assistant options, not by editing
 - Higher scan resolutions may be device-dependent and can be slow on older scanners
 - AirSane only works once the underlying SANE backend can see the device
 - Setting add-on `log_level` to `debug` or `trace` also enables AirSane's own debug output
+- If you need a model that is not in the built-in catalog yet, the right fix is to add it to the shipped catalog and patch, rather than defining it ad hoc in add-on options

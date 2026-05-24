@@ -1,5 +1,5 @@
 ---
-version: 0.1.1
+version: 0.1.2
 slug: airsane_scanner
 name: AirSane Scanner
 description: Publish configured SANE scanners to macOS and other AirScan/eSCL clients
@@ -36,13 +36,8 @@ schema:
   scanners:
     - name: str
       host: str
-      model: str?
+      model: str
       enabled: bool?
       defaults:
         mode: list(color|gray|bw)?
         resolution: int(75,1200)?
-      model_override:
-        usb_id: str?
-        series: int?
-        type: int?
-        model_name: str?

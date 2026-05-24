@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2
+
+- Remove runtime Brother model override support from add-on options
+- Stop generating a runtime `zz-hass-models.ini`; rely on curated shipped Brother model data instead
+- Simplify the renderer to require a known built-in model for every configured scanner
+- Clarify docs around the network-only scope and curated model support strategy
+
 ## 0.1.1
 
 - Harden runtime config rendering with stricter scanner normalization and clearer validation errors

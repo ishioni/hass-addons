@@ -11,7 +11,6 @@ from typing import Any
 
 ROOT_DIR = Path(os.environ.get("AIRSANE_SCANNER_ROOT", "/"))
 VALID_SCANNER_NAME_RE = re.compile(r"^[A-Za-z0-9._-]+$")
-USB_ID_RE = re.compile(r"^0x[0-9a-fA-F]+:0x[0-9a-fA-F]+$")
 MODE_OPTION_VALUES = {
     "color": "Color",
     "gray": "Gray",
@@ -33,7 +32,6 @@ KNOWN_MODELS_PATH = Path(
     )
 )
 BROTHER_SHARE_DIR = rooted("/usr/share/sane/brother")
-BROTHER_MODELS_DIR = BROTHER_SHARE_DIR / "models2"
 BROTHER_NETDEV_FILE = BROTHER_SHARE_DIR / "brsanenetdevice2.cfg"
 SANE_DLL_CONF = rooted("/etc/sane.d/dll.conf")
 AIRSANE_DEFAULTS = rooted("/etc/default/airsane")
@@ -41,7 +39,6 @@ AIRSANE_DIR = rooted("/etc/airsane")
 AIRSANE_OPTIONS = AIRSANE_DIR / "options.conf"
 AIRSANE_ACCESS = AIRSANE_DIR / "access.conf"
 AIRSANE_IGNORE = AIRSANE_DIR / "ignore.conf"
-GENERATED_MODEL_FILE = BROTHER_MODELS_DIR / "zz-hass-models.ini"
 
 
 def load_json(path: Path) -> Any:
@@ -92,17 +89,16 @@ def normalize_scanners(raw_scanners: Any) -> list[dict[str, Any]]:
         if not host:
             raise ValueError(f"scanner '{name}' is missing a host")
 
+        model = str(scanner.get("model", "")).strip()
+        if not model:
+            raise ValueError(f"scanner '{name}' is missing a model")
+
         normalized: dict[str, Any] = {
             "name": name,
             "host": host,
+            "model": model,
             "enabled": normalize_bool(scanner.get("enabled"), True),
         }
-
-        model = scanner.get("model")
-        if model is not None:
-            model = str(model).strip()
-            if model:
-                normalized["model"] = model
 
         defaults = scanner.get("defaults") or {}
         if defaults and not isinstance(defaults, dict):
@@ -130,46 +126,15 @@ def normalize_scanners(raw_scanners: Any) -> list[dict[str, Any]]:
         if normalized_defaults:
             normalized["defaults"] = normalized_defaults
 
-        override = scanner.get("model_override") or {}
-        if override and not isinstance(override, dict):
-            raise ValueError(f"scanner '{name}' model_override must be an object")
-        if override:
-            normalized["model_override"] = override
-
         scanners.append(normalized)
 
     return scanners
 
 
-def normalize_model(
+def resolve_model(
     scanner: dict[str, Any], known_models: dict[str, Any]
 ) -> dict[str, Any]:
-    override = scanner.get("model_override") or {}
-    if override:
-        usb_id = str(override.get("usb_id", "")).strip()
-        series = override.get("series")
-        model_type = override.get("type")
-        model_name = str(override.get("model_name", "")).strip()
-        if not all([usb_id, series is not None, model_type is not None, model_name]):
-            raise ValueError(
-                f"scanner '{scanner['name']}' has incomplete model_override"
-            )
-        if not USB_ID_RE.fullmatch(usb_id):
-            raise ValueError(
-                f"scanner '{scanner['name']}' has invalid model_override.usb_id '{usb_id}'"
-            )
-        return {
-            "usb_id": usb_id,
-            "series": int(series),
-            "type": int(model_type),
-            "model_name": model_name,
-        }
-
-    model_name = scanner.get("model")
-    if not model_name:
-        raise ValueError(
-            f"scanner '{scanner['name']}' must define either model or model_override"
-        )
+    model_name = scanner["model"]
     if model_name not in known_models:
         raise ValueError(
             f"scanner '{scanner['name']}' uses unknown model '{model_name}'"
@@ -177,37 +142,26 @@ def normalize_model(
     return dict(known_models[model_name])
 
 
+def resolve_scanners(
+    scanners: list[dict[str, Any]], known_models: dict[str, Any]
+) -> list[dict[str, Any]]:
+    rendered: list[dict[str, Any]] = []
+    for scanner in scanners:
+        if not scanner["enabled"]:
+            continue
+        rendered.append(
+            {**scanner, "_resolved_model": resolve_model(scanner, known_models)}
+        )
+    return rendered
+
+
 def write_sane_dll_conf() -> None:
     ensure_dir(SANE_DLL_CONF.parent)
     SANE_DLL_CONF.write_text("brother\n", encoding="utf-8")
 
 
-def write_brother_model_file(
-    scanners: list[dict[str, Any]], known_models: dict[str, Any]
-) -> list[dict[str, Any]]:
-    ensure_dir(BROTHER_MODELS_DIR)
-    rendered: list[dict[str, Any]] = []
-    lines = ["[Support Model]"]
-    seen_model_names: set[str] = set()
-
-    for scanner in scanners:
-        if not scanner["enabled"]:
-            continue
-        model = normalize_model(scanner, known_models)
-        rendered.append({**scanner, "_resolved_model": model})
-        if model["model_name"] in seen_model_names:
-            continue
-        seen_model_names.add(model["model_name"])
-        _, product_id = model["usb_id"].split(":", 1)
-        lines.append(
-            f'{product_id},{model["series"]},{model["type"]},"{model["model_name"]}"'
-        )
-
-    GENERATED_MODEL_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return rendered
-
-
 def write_brother_netdev_file(scanners: list[dict[str, Any]]) -> None:
+    ensure_dir(BROTHER_SHARE_DIR)
     lines: list[str] = []
     for scanner in scanners:
         model = scanner["_resolved_model"]
@@ -295,13 +249,12 @@ def write_airsane_aux_files(scanners: list[dict[str, Any]]) -> list[str]:
 
 
 def main() -> None:
-    ensure_dir(BROTHER_SHARE_DIR)
     options = load_json(OPTIONS_PATH) if OPTIONS_PATH.exists() else {}
     known_models = load_json(KNOWN_MODELS_PATH)
     scanners = normalize_scanners(options.get("scanners"))
+    rendered = resolve_scanners(scanners, known_models)
 
     write_sane_dll_conf()
-    rendered = write_brother_model_file(scanners, known_models)
     write_brother_netdev_file(rendered)
     write_airsane_defaults(options)
     warnings = write_airsane_aux_files(rendered)
@@ -310,7 +263,6 @@ def main() -> None:
         json.dumps(
             {
                 "configured_scanners": [scanner["name"] for scanner in rendered],
-                "generated_model_file": str(GENERATED_MODEL_FILE),
                 "generated_netdev_file": str(BROTHER_NETDEV_FILE),
                 "generated_options_file": str(AIRSANE_OPTIONS),
                 "warnings": warnings,

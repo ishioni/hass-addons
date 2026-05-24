@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+- Pass AirSane hotplug-related flags through from generated config instead of silently relying on upstream defaults
+- Add configurable `airsane.interface`, `airsane.hotplug`, `airsane.network_hotplug`, `airsane.reload_delay`, and `airsane.announce_base_url` add-on options
+- Default `airsane.network_hotplug` to `false` in this add-on to avoid startup reloads triggered by IPv6/link-local address churn in the Home Assistant host-network environment
+
 ## 0.1.3
 
 - Expand the built-in Brother model catalog to cover the full model inventory found in Brother's `brscan4` ini files
@@ -8,6 +14,7 @@
 - Add `SUPPORTED_MODELS.md` and link to it from the docs so users can choose exact built-in model names
 - Refactor the Docker build into builder/runtime stages so compiler toolchains and development headers stay out of the final image
 - Add explicit S6 services for D-Bus and Avahi plus an Avahi config file instead of backgrounding those daemons manually in `run.sh`
+- Fix the multi-stage runtime image to include `brscan` companion libraries (`libbrcolm*`, `libbrscandec*`) needed when opening scanners
 
 ## 0.1.2
 

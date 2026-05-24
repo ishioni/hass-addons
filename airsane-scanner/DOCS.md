@@ -37,7 +37,12 @@ Example configuration:
 log_level: info
 airsane:
   port: 8090
+  interface: ""
+  hotplug: true
+  network_hotplug: false
+  reload_delay: 1
   mdns_announce: true
+  announce_base_url: ""
   web_interface: true
   compatible_path: true
   local_scanners_only: false
@@ -65,6 +70,17 @@ scanners:
 When AirSane can uniquely match a configured scanner model, the add-on writes `defaults.mode` and `defaults.resolution` into `options.conf` as backend defaults.
 
 If you configure multiple scanners that share the same Brother model string, AirSane cannot reliably distinguish them with the current matching approach. In that case, the add-on skips per-device defaults for that model and logs a warning instead of generating misleading config.
+
+### AirSane runtime fields
+
+- `airsane.interface`: Optional interface name passed to `airsaned --interface=...`.
+  - Leave empty to listen on all interfaces.
+  - If startup is unstable, try pinning this to the host LAN interface.
+- `airsane.hotplug`: Whether AirSane should rescan on generic hotplug events.
+- `airsane.network_hotplug`: Whether AirSane should reload when IP addresses change.
+  - Defaults to `false` in this add-on because Home Assistant's host-network/container environment can produce IPv6/link-local address churn that causes AirSane to reload during startup.
+- `airsane.reload_delay`: Delay before an AirSane hotplug-triggered reload.
+- `airsane.announce_base_url`: Optional explicit base URL passed to `airsaned --announce-base-url=...`.
 
 ## Networking
 

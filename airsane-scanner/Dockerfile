@@ -72,17 +72,24 @@ RUN apt update \
 
 COPY --from=builder /usr/local/bin/airsaned /usr/local/bin/airsaned
 COPY --from=builder /usr/lib/sane/libsane-brother.so.1 /usr/lib/sane/libsane-brother.so.1
+COPY --from=builder /usr/lib/libbrcolm.so.1 /usr/lib/libbrcolm.so.1
+COPY --from=builder /usr/lib/libbrscandec.so.1 /usr/lib/libbrscandec.so.1
 COPY --from=builder /usr/share/sane/brother /usr/share/sane/brother
 COPY --from=builder /etc/ld.so.conf.d/brscan-sane.conf /etc/ld.so.conf.d/brscan-sane.conf
 
 COPY rootfs /
 
-RUN chmod a+x \
-    /run.sh \
-    /usr/local/bin/render-config.py \
-    /etc/s6-overlay/s6-rc.d/initialization/up \
-    /etc/s6-overlay/s6-rc.d/dbus-daemon/run \
-    /etc/s6-overlay/s6-rc.d/avahi-daemon/run \
+RUN ln -sf libsane-brother.so.1 /usr/lib/sane/libsane-brother.so \
+    && ln -sf libbrcolm.so.1 /usr/lib/libbrcolm.so \
+    && ln -sf libbrcolm.so /usr/lib/libbrcolm2.so \
+    && ln -sf libbrscandec.so.1 /usr/lib/libbrscandec.so \
+    && ln -sf libbrscandec.so /usr/lib/libbrscandec2.so \
+    && chmod a+x \
+        /run.sh \
+        /usr/local/bin/render-config.py \
+        /etc/s6-overlay/s6-rc.d/initialization/up \
+        /etc/s6-overlay/s6-rc.d/dbus-daemon/run \
+        /etc/s6-overlay/s6-rc.d/avahi-daemon/run \
     && ldconfig
 
 EXPOSE 8090

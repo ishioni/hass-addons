@@ -24,6 +24,9 @@ source /etc/default/airsane
 
 airsane_args=(
   "--listen-port=${LISTEN_PORT}"
+  "--hotplug=${HOTPLUG}"
+  "--network-hotplug=${NETWORK_HOTPLUG}"
+  "--reload-delay=${RELOAD_DELAY}"
   "--mdns-announce=${MDNS_ANNOUNCE}"
   "--web-interface=${WEB_INTERFACE}"
   "--compatible-path=${COMPATIBLE_PATH}"

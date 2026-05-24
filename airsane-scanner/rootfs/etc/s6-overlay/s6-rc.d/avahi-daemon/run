@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::log.info "Starting Avahi daemon from S6"
+
+until [ -S /run/dbus/system_bus_socket ]; do
+  sleep 1s
+done
+
+exec avahi-daemon --no-chroot

@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bashio
+
+bashio::log.info "Starting DBUS daemon from S6"
+
+exec dbus-daemon --system --nofork

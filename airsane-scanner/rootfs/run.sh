@@ -6,21 +6,19 @@ bashio::log.info "Rendering scanner and AirSane configuration"
 render_output="$(/usr/local/bin/render-config.py)"
 bashio::log.info "Render result: ${render_output}"
 
-bashio::log.info "Starting D-Bus system daemon"
-mkdir -p /run/dbus
-if [ ! -f /run/dbus/pid ]; then
-  dbus-daemon --system --fork
-fi
-
-bashio::log.info "Starting Avahi daemon"
-mkdir -p /run/avahi-daemon
-if [ ! -S /run/avahi-daemon/socket ]; then
-  avahi-daemon --daemonize --no-chroot
-fi
-
 if [ -f /etc/ld.so.conf.d/brscan-sane.conf ]; then
   ldconfig
 fi
+
+bashio::log.info "Waiting for D-Bus socket"
+until [ -S /run/dbus/system_bus_socket ]; do
+  sleep 1s
+done
+
+bashio::log.info "Waiting for Avahi socket"
+until [ -S /run/avahi-daemon/socket ]; do
+  sleep 1s
+done
 
 source /etc/default/airsane
 

@@ -7,6 +7,7 @@
 - Broaden the local `brscan` patch so shipped backend model data tracks the same expanded Brother `brscan4` inventory
 - Add `SUPPORTED_MODELS.md` and link to it from the docs so users can choose exact built-in model names
 - Refactor the Docker build into builder/runtime stages so compiler toolchains and development headers stay out of the final image
+- Add explicit S6 services for D-Bus and Avahi plus an Avahi config file instead of backgrounding those daemons manually in `run.sh`
 
 ## 0.1.2
 

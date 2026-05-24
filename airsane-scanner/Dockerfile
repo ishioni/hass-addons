@@ -77,7 +77,12 @@ COPY --from=builder /etc/ld.so.conf.d/brscan-sane.conf /etc/ld.so.conf.d/brscan-
 
 COPY rootfs /
 
-RUN chmod a+x /run.sh /usr/local/bin/render-config.py \
+RUN chmod a+x \
+    /run.sh \
+    /usr/local/bin/render-config.py \
+    /etc/s6-overlay/s6-rc.d/initialization/up \
+    /etc/s6-overlay/s6-rc.d/dbus-daemon/run \
+    /etc/s6-overlay/s6-rc.d/avahi-daemon/run \
     && ldconfig
 
 EXPOSE 8090

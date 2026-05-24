@@ -1,0 +1,24 @@
+---
+version: 0.1.0
+slug: cups
+name: CUPS
+description: A CUPS print server with working AirPrint
+url: https://github.com/ishioni/hass-addons/
+arch:
+  - amd64
+  - aarch64
+image: ghcr.io/ishioni/hass-addon-cups-{arch}
+usb: true
+init: false
+hassio_api: true
+homeassistant_api: true
+host_network: true
+ports:
+  631/tcp: 631
+  631/udp: 631
+ports_description:
+  631/tcp: For other devices on the local network to print to this server
+  631/udp: For other devices on the local network to print to this server
+# ingress: false
+map:
+  - config:rw

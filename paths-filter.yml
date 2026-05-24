@@ -1,0 +1,4 @@
+# AUTO BUILDS #
+# From https://github.com/Poeschl/Hassio-Addons
+# name: slug/filename ; could be slug/config.* for all files
+cups: cups/config.*

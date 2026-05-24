@@ -1,0 +1,122 @@
+[
+  {
+    "label": "Just: Check",
+    "command": "just",
+    "args": ["check"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Check Lint",
+    "command": "just",
+    "args": ["check-lint"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Build",
+    "command": "just",
+    "args": ["build"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Build Docker arm64",
+    "command": "just",
+    "args": ["build-docker-arm64"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Build Docker amd64",
+    "command": "just",
+    "args": ["build-docker-amd64"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Validate Renovate",
+    "command": "just",
+    "args": ["validate-renovate"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Format All",
+    "command": "just",
+    "args": ["format-all"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Precommit Init",
+    "command": "just",
+    "args": ["precommit-init"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Precommit Run",
+    "command": "just",
+    "args": ["precommit-run"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Just: Precommit Update",
+    "command": "just",
+    "args": ["precommit-update"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  },
+  {
+    "label": "Start Home Assistant",
+    "command": "supervisor_run",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "never",
+    "allow_concurrent_runs": false,
+    "save": "all"
+  }
+]

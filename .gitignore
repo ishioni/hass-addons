@@ -1,0 +1,28 @@
+# Node / package managers
+node_modules/
+.npm/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Env / local config
+.env
+.env.*
+.direnv/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Build / test artifacts
+coverage/
+dist/
+build/
+.tmp/
+tmp/
+*.log

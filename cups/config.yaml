@@ -1,12 +1,13 @@
-name: CUPS
-version: 4.2.3.4
-url: https://github.com/MaxWinterstein/homeassistant-addons/
-image: ghcr.io/maxwinterstein/homeassistant-addon-cups-{arch}
+---
+version: 0.1.0
 slug: cups
+name: CUPS
 description: A CUPS print server with working AirPrint
+url: https://github.com/ishioni/hass-addons/
 arch:
   - amd64
   - aarch64
+image: ghcr.io/ishioni/hass-addon-cups-{arch}
 usb: true
 init: false
 hassio_api: true
@@ -21,4 +22,3 @@ ports_description:
 # ingress: false
 map:
   - config:rw
-stage: experimental

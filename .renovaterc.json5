@@ -1,0 +1,40 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "mergeConfidence:all-badges",
+    "config:recommended",
+    "config:js-app",
+    ":disableDigestUpdates",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimitNone",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes",
+    "customManagers:dockerfileVersions",
+  ],
+  rebaseWhen: "conflicted",
+  dependencyDashboard: true,
+  dependencyDashboardAutoclose: true,
+  labels: ["dependencies", "no-stale"],
+  commitMessageTopic: "{{depName}}",
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: ["/(^|/)Dockerfile$/"],
+      matchStringsStrategy: "any",
+      matchStrings: ["FROM (?<depName>.*?):(?<currentValue>.*?)\\s+"],
+      datasourceTemplate: "docker",
+    },
+  ],
+  packageRules: [
+    {
+      matchManagers: ["github-actions"],
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+    },
+  ],
+  ignorePaths: ["portainer/*", "awtrix/*", "octoprint-proxy/*", "ioBroker/*"],
+  commitMessagePrefix: "[{{packageFileDir}}]",
+  gitIgnoredAuthors: ["renovate[bot]", "github-actions"],
+  prHeader: '{"prProperties": {"branchName": "{{branchName}}", "depName": "{{depName}}", "newVersion": "{{newValue}}"}}\n',
+}

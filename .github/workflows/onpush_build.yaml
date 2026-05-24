@@ -1,0 +1,124 @@
+# yamllint disable rule:line-length
+---
+name: Builder
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**/config.*"
+
+jobs:
+  check-addon-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      changedAddons: ${{ steps.filter.outputs.changes }}
+    steps:
+      - name: ↩️ Checkout
+        uses: actions/checkout@v6
+
+      - name: 📂 Detect changed files
+        uses: dorny/paths-filter@v4
+        id: filter
+        with:
+          filters: paths-filter.yml
+
+  lint_config:
+    if: ${{ needs.check-addon-changes.outputs.changedAddons != '[]' }}
+    needs: check-addon-changes
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        addon: ${{ fromJSON(needs.check-addon-changes.outputs.changedAddons) }}
+    steps:
+      - name: ↩️ Checkout
+        uses: actions/checkout@v6
+
+      - name: 🔎 Run Home Assistant Add-on Lint
+        uses: frenck/action-addon-linter@v2
+        with:
+          path: "./${{ matrix.addon }}"
+
+  build:
+    if: ${{ needs.check-addon-changes.outputs.changedAddons != '[]' }}
+    needs:
+      - check-addon-changes
+      - lint_config
+    name: Build ${{ matrix.arch }} ${{ matrix.addon }} add-on
+    runs-on: ${{ matrix.arch == 'aarch64' && 'ubuntu-24.04-arm' || 'ubuntu-24.04' }}
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        addon: ${{ fromJSON(needs.check-addon-changes.outputs.changedAddons) }}
+        arch: [amd64, aarch64]
+
+    steps:
+      - name: ↩️ Checkout
+        uses: actions/checkout@v6
+
+      - name: ℹ️ Get add-on information
+        id: info
+        uses: home-assistant/actions/helpers/info@master
+        with:
+          path: "./${{ matrix.addon }}"
+
+      - name: 🔎 Check if architecture is supported
+        id: supported
+        shell: bash
+        run: |
+          if jq -e --arg arch "${{ matrix.arch }}" '.[] | select(. == $arch)' <<< '${{ steps.info.outputs.architectures }}' >/dev/null; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping unsupported architecture: ${{ matrix.arch }}"
+          fi
+
+      - name: 🖼️ Compute image name
+        if: ${{ steps.supported.outputs.enabled == 'true' }}
+        id: image
+        shell: bash
+        run: |
+          echo "value=${{ steps.info.outputs.image }}" | sed 's/{arch}/${{ matrix.arch }}/g' >> "$GITHUB_OUTPUT"
+
+      - name: 🏷️ Create OCI labels
+        if: ${{ steps.supported.outputs.enabled == 'true' }}
+        id: labels
+        shell: bash
+        run: |
+          {
+            echo "value<<EOF"
+            echo "io.hash.name=${{ steps.info.outputs.name }}"
+            echo "io.hash.description=${{ steps.info.outputs.description }}"
+            echo "io.hash.type=addon"
+            echo "io.hash.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}"
+            echo "org.opencontainers.image.title=${{ steps.info.outputs.name }}"
+            echo "org.opencontainers.image.description=${{ steps.info.outputs.description }}"
+            echo "org.opencontainers.image.authors=Ishioni <ishioni@users.noreply.github.com>"
+            echo "org.opencontainers.image.url=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
+            echo "org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/master/${{ matrix.addon }}"
+            echo "org.opencontainers.image.revision=${GITHUB_SHA}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: 🚀 Build and push image
+        if: ${{ steps.supported.outputs.enabled == 'true' }}
+        uses: home-assistant/builder/actions/build-image@2026.03.2
+        with:
+          arch: ${{ matrix.arch }}
+          cache-gha-scope: ${{ matrix.addon }}
+          container-registry-password: ${{ secrets.GITHUB_TOKEN }}
+          context: ${{ matrix.addon }}
+          cosign: "false"
+          file: ${{ matrix.addon }}/Dockerfile
+          image: ${{ steps.image.outputs.value }}
+          image-tags: |
+            ${{ steps.info.outputs.version }}
+            latest
+          labels: ${{ steps.labels.outputs.value }}
+          push: "true"
+          version: ${{ steps.info.outputs.version }}

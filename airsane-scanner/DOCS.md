@@ -14,6 +14,8 @@ It is designed around a generated configuration model:
 
 This first version targets curated Brother network scanners through the open-source `brscan` backend and publishes them through AirSane.
 
+For now, this add-on supports **`brscan` models only**.
+
 That means each configured scanner is expected to be reachable over the network, so `host` is required for every scanner entry.
 
 This add-on does **not** currently support:
@@ -25,9 +27,11 @@ Supported models are the ones shipped in the add-on's built-in model catalog and
 
 That catalog is now derived from Brother's `brscan4` ini files (main file plus extension ini files), rather than from a tiny hand-maintained subset.
 
+For the current built-in catalog, see [`SUPPORTED_MODELS.md`](SUPPORTED_MODELS.md).
+
 ## Configuration
 
-Example:
+Example configuration:
 
 ```yaml
 log_level: info
@@ -51,7 +55,7 @@ scanners:
 
 - `name`: Friendly identifier used in generated config and logs. Use only letters, numbers, `.`, `_`, or `-`.
 - `host`: Scanner IP address or hostname. Required because this add-on currently supports network scanners only.
-- `model`: Known built-in Brother model name from the add-on catalog.
+- `model`: Known built-in Brother model name from the add-on catalog. Use the exact value shown in [`SUPPORTED_MODELS.md`](SUPPORTED_MODELS.md).
 - `enabled`: Optional, defaults to `true`
 - `defaults.mode`: Optional AirSane/SANE default mode hint. Supported values: `color`, `gray`, `bw`
 - `defaults.resolution`: Optional AirSane/SANE default resolution hint

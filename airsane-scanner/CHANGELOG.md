@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.1
+
+- Harden runtime config rendering with stricter scanner normalization and clearer validation errors
+- Add local path overrides to `render-config.py` so generated config can be validated outside Home Assistant
+- Emit generated config summary at startup for easier troubleshooting
+- Enable AirSane debug mode automatically when add-on `log_level` is `debug` or `trace`
+- Apply `defaults.mode` and `defaults.resolution` to generated AirSane device options when the scanner model can be matched unambiguously
+- Avoid generating misleading per-device AirSane options when multiple configured scanners share the same Brother model string
+
 ## 0.1.0
 
 - Initial scaffold for AirSane scanner add-on

@@ -38,12 +38,12 @@ scanners:
 
 ### Scanner fields
 
-- `name`: Friendly identifier used in generated config
+- `name`: Friendly identifier used in generated config and logs. Use only letters, numbers, `.`, `_`, or `-`.
 - `host`: Scanner IP address or hostname
 - `model`: Known built-in model name
 - `enabled`: Optional, defaults to `true`
-- `defaults.mode`: Optional hint for future UI/preset use
-- `defaults.resolution`: Optional hint for future UI/preset use
+- `defaults.mode`: Optional AirSane/SANE default mode hint. Supported values: `color`, `gray`, `bw`
+- `defaults.resolution`: Optional AirSane/SANE default resolution hint
 - `model_override`: Advanced escape hatch for unsupported models
 
 Example override:
@@ -59,6 +59,12 @@ scanners:
       type: 2
       model_name: DCP-7055W
 ```
+
+### Notes about defaults
+
+When AirSane can uniquely match a configured scanner model, the add-on writes `defaults.mode` and `defaults.resolution` into `options.conf` as backend defaults.
+
+If you configure multiple scanners that share the same Brother model string, AirSane cannot reliably distinguish them with the current matching approach. In that case, the add-on skips per-device defaults for that model and logs a warning instead of generating misleading config.
 
 ## Networking
 
@@ -91,3 +97,4 @@ Users should configure the add-on through Home Assistant options, not by editing
 - This add-on currently focuses on Brother network scanners
 - Higher scan resolutions may be device-dependent and can be slow on older scanners
 - AirSane only works once the underlying SANE backend can see the device
+- Setting add-on `log_level` to `debug` or `trace` also enables AirSane's own debug output

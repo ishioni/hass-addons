@@ -3,7 +3,8 @@
 set -euo pipefail
 
 bashio::log.info "Rendering scanner and AirSane configuration"
-/usr/local/bin/render-config.py
+render_output="$(/usr/local/bin/render-config.py)"
+bashio::log.info "Render result: ${render_output}"
 
 bashio::log.info "Starting D-Bus system daemon"
 mkdir -p /run/dbus
@@ -33,6 +34,15 @@ airsane_args=(
   "--ignore-list=${IGNORE_LIST}"
   "--access-file=${ACCESS_FILE}"
 )
+
+log_level="info"
+if [ -f /data/options.json ]; then
+  log_level="$(jq -r '.log_level // "info"' /data/options.json 2>/dev/null || printf 'info')"
+fi
+if [ "${log_level}" = "debug" ] || [ "${log_level}" = "trace" ]; then
+  bashio::log.info "Enabling AirSane debug logging"
+  airsane_args+=("--debug=true")
+fi
 
 if [ -n "${INTERFACE}" ]; then
   airsane_args+=("--interface=${INTERFACE}")

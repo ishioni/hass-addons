@@ -203,7 +203,7 @@ jobs:
 
       - name: 💿 Build Addon
         if: ${{ steps.supported.outputs.enabled == 'true' }}
-        uses: docker/build-push-action@v7.2.0
+        uses: docker/build-push-action@v7.3.0
         with:
           context: ${{ matrix.addon }}
           push: false

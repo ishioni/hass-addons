@@ -1,4 +1,4 @@
-FROM ghcr.io/hassio-addons/debian-base:9.3.0 AS builder
+FROM ghcr.io/hassio-addons/debian-base:9.4.0 AS builder
 
 ARG AIRSANE_REF=v.0.4.10
 ARG BRSCAN_REF=v1.0.1
@@ -51,7 +51,7 @@ RUN mkdir -p /tmp/src \
     && cmake --install /tmp/AirSane-build \
     && rm -rf /tmp/AirSane /tmp/AirSane-build /tmp/src /tmp/patches
 
-FROM ghcr.io/hassio-addons/debian-base:9.3.0
+FROM ghcr.io/hassio-addons/debian-base:9.4.0
 
 LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
 

@@ -1,4 +1,4 @@
-FROM ghcr.io/hassio-addons/debian-base:9.3.0
+FROM ghcr.io/hassio-addons/debian-base:9.5.2
 
 ARG CUPS_VERSION=2.4.10-3+deb13u2
 
